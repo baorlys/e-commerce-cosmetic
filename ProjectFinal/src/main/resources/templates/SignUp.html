@@ -46,15 +46,11 @@
                     <h2>Sign Up</h2>
                 </div>
                 <form th:action="@{/register/save}" method="post" th:object="${user}">
-                    
-                    <div class="InputForm">
-                        <span>First Name</span>
-                        <input type="text" name="firstName" id="firstName" placeholder="Enter your first name" th:field="*{firstName}">
-                    </div>
+
 					
 					<div class="InputForm">
                         <span>Last Name</span>
-                        <input type="text" name="lastName" id="lastName" placeholder="Enter your fullname" th:field="*{lastName}">
+                        <input type="text" name="lastName" id="fullname" placeholder="Enter your name" th:field="*{fullName}">
                     </div>
 					
                     <div class="InputForm">

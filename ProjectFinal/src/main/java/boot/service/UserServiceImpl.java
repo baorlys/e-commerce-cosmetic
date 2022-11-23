@@ -51,26 +51,26 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserInfo save(UserRegistrationDto registrationDto) {
 		UserInfo user = new UserInfo();
-		user.setFullName(registrationDto.getFirstName()+registrationDto.getLastName());
+		user.setFullName(registrationDto.getFullName());
 		user.setEmail(registrationDto.getEmail());
 //		BCryptPasswordEncoder passwordEncoder =(BCryptPasswordEncoder) passwordEncoder1();
 		user.setPassword(passwordEncoder.encode(registrationDto.getPassword()));
 		user.setAddress(null);
 		user.setPoint(0);
 		user.setPhone(null);
-		Role role = roleRepository.findByRoleName("ROLE_ADMIN");
-		 if(role == null){
-	            role = checkRoleExist();
-	        }
+		Role role = roleRepository.findByRoleName("user");
+		if(role == null){
+			role.setRoleName("user");
+		}
 	    user.setRoles(Arrays.asList(role));
 	    
 		return userRepository.save(user);
 	}
-	private Role checkRoleExist(){
-        Role role = new Role();
-        role.setRoleName("ROLE_ADMIN");
-        return roleRepository.save(role);
-    }
+//	private Role checkRoleExist(){
+//        Role role = new Role();
+//        role.setRoleName("user");
+//        return roleRepository.save(role);
+//    }
 
 	@Override
 	public UserInfo findUserByEmail(String email) {
