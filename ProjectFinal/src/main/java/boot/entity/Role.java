@@ -25,18 +25,18 @@ public class Role {
 	private String roleName;
 
 	@ManyToMany(mappedBy = "roles")
-    private List<User_info> users = new ArrayList<>();
+    private List<UserInfo> users = new ArrayList<>();
     
-	public List<User_info> getUsers() {
+	public List<UserInfo> getUsers() {
 		return users;
 	}
 
-	public void setUsers(List<User_info> users) {
+	public void setUsers(List<UserInfo> users) {
 		this.users = users;
 	}
 
 	
-	public Role(String roleName, List<User_info> users) {
+	public Role(String roleName, List<UserInfo> users) {
 		super();
 		this.roleName = roleName;
 		this.users = users;

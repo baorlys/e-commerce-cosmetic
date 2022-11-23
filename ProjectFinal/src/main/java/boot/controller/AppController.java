@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import boot.dto.UserRegistrationDto;
-import boot.entity.User_info;
+import boot.entity.UserInfo;
 import boot.service.UserService;
 
 @Controller
@@ -45,7 +45,7 @@ public class AppController {
 	public String saveProduct(@ModelAttribute("user") UserRegistrationDto userRegistrationDto,
 										BindingResult result,
 										Model model) {
-		User_info existingUser = userService.findUserByEmail(userRegistrationDto.getEmail());
+		UserInfo existingUser = userService.findUserByEmail(userRegistrationDto.getEmail());
 		
 		if(existingUser != null && existingUser.getEmail() != null && !existingUser.getEmail().isEmpty()){
             result.rejectValue("email", 

@@ -6,7 +6,6 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
-import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -21,7 +20,7 @@ import org.springframework.stereotype.Service;
 
 import boot.dto.UserRegistrationDto;
 import boot.entity.Role;
-import boot.entity.User_info;
+import boot.entity.UserInfo;
 import boot.repository.RoleRepository;
 import boot.repository.UserRepository;
 
@@ -50,9 +49,9 @@ public class UserServiceImpl implements UserService {
 
 
 	@Override
-	public User_info save(UserRegistrationDto registrationDto) {
-		User_info user = new User_info();
-		user.setFull_name(registrationDto.getFirstName()+registrationDto.getLastName());
+	public UserInfo save(UserRegistrationDto registrationDto) {
+		UserInfo user = new UserInfo();
+		user.setFullName(registrationDto.getFirstName()+registrationDto.getLastName());
 		user.setEmail(registrationDto.getEmail());
 //		BCryptPasswordEncoder passwordEncoder =(BCryptPasswordEncoder) passwordEncoder1();
 		user.setPassword(passwordEncoder.encode(registrationDto.getPassword()));
@@ -74,7 +73,7 @@ public class UserServiceImpl implements UserService {
     }
 
 	@Override
-	public User_info findUserByEmail(String email) {
+	public UserInfo findUserByEmail(String email) {
 		
 		return userRepository.findByEmail(email);
 	}

@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import boot.entity.Role;
-import boot.entity.User_info;
+import boot.entity.UserInfo;
 import boot.repository.UserRepository;
 
 @Service
@@ -24,8 +24,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-    	
-        User_info user = userRepository.findByEmail(username);
+
+        UserInfo user = userRepository.findByEmail(username);
        
         if(user != null){
             return new org.springframework.security.core.userdetails.User(user.getEmail()

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d37a132a-42b2-471c-b59a-676f7b022986" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/User_info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/security/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Hx1vfaMFDq5sCnJnzgbsYwFmgN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Techzones/Documents/Workplace/IT/Java Technology/Final/java-final/ProjectFinal",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="AppMain" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ProjectFinal" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="boot.AppMain" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d37a132a-42b2-471c-b59a-676f7b022986" name="Changes" comment="" />
+      <created>1669212155389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669212155389</updated>
+      <workItem from="1669212158450" duration="3536000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,5 +1,7 @@
 package boot.entity;
 
+import lombok.Data;
+
 import java.util.Collection;
 
 import javax.persistence.CascadeType;
@@ -16,15 +18,16 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
+@Data
 @Table(name = "user_info",uniqueConstraints = @UniqueConstraint(columnNames = "email"))
-public class User_info {
+public class UserInfo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id",nullable = false)
-	private long user_id;
+	private long userId;
 	
 	@Column(name = "full_name",length = 50)
-	private String full_name;
+	private String fullName;
 	
 	@Column(nullable = false)
 	private String email;
@@ -51,11 +54,11 @@ public class User_info {
 
 	
 
-	public User_info(String full_name, String email, String password, String address, String phone,
+	public UserInfo(String full_name, String email, String password, String address, String phone,
 			int point, Collection<Role> roles) {
 		super();
 		
-		this.full_name = full_name;
+		this.fullName = full_name;
 		this.email = email;
 		this.password = password;
 		this.address = address;
@@ -64,9 +67,9 @@ public class User_info {
 		this.roles = roles;
 	}
 
-	public User_info() {
+	public UserInfo() {
 		super();
-		this.full_name = "";
+		this.fullName = "";
 		this.email = "";
 		this.password = "";
 		this.address = "";
@@ -75,69 +78,6 @@ public class User_info {
 		this.roles = null;
 	}
 
-	public long getUser_id() {
-		return user_id;
-	}
-
-	public void setUser_id(long user_id) {
-		this.user_id = user_id;
-	}
-
-	public String getFull_name() {
-		return full_name;
-	}
-
-	public void setFull_name(String full_name) {
-		this.full_name = full_name;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public int getPoint() {
-		return point;
-	}
-
-	public void setPoint(int point) {
-		this.point = point;
-	}
-
-	public Collection<Role> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(Collection<Role> roles) {
-		this.roles = roles;
-	}
 
 	
 }

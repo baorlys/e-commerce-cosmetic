@@ -4,11 +4,11 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Repository;
 
 import boot.dto.UserRegistrationDto;
-import boot.entity.User_info;
+import boot.entity.UserInfo;
 
 
 public interface UserService {
-	User_info save(UserRegistrationDto registrationDto);
-	
-	User_info findUserByEmail(String email);
+	UserInfo save(UserRegistrationDto registrationDto);
+
+	UserInfo findUserByEmail(String email);
 }
