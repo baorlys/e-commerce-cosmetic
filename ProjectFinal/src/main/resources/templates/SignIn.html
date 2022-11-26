@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link css  -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="./FontAwesome/fontawesome-free-6.2.0-web/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+</head>
+
+<body>
+    <!-- login -->
+    
+    <section>
+    
+        <div class="Container">
+            <div class="FormLogin">
+                <div class="FormLogin_logo">
+                    <label for="" class="logo"><i class="fa-sharp fa-solid fa-basket-shopping"></i></label>
+                    <h2>SIGN IN</h2>
+                </div>
+                <form th:action="@{/login}" method="post">
+                    
+	                    <div th:if="${param.error}">
+	      <div class="alert alert-danger">Invalid username or password.</div>
+	     			</div>
+	     			
+	     			<div th:if="${param.logout}">
+				      <div class="alert alert-info">You have been logged out.</div>
+				     </div>
+     
+                    <div class="InputForm">
+                        <span>Email</span>
+                        <input type="text" name="username" placeholder="Enter your email" id="username">
+                    </div>
+
+                    <div class="InputForm">
+                        <span>Password</span>
+                        <input type="password" name="password" placeholder="........" id="password">
+                    </div>
+
+                    <div class="remember">
+                        <label for=""><input type="checkbox" name = "remember-me" id="remember-me"> Remember me</label>
+                    </div>
+
+                    <div class="InputForm">
+                        <input type="submit" value="Sign in" name="">
+                    </div>
+
+                    <div class="InputForm">
+                        <p>Don't have account ? <a href="register">Sign up</a></p>
+                    </div>
+                </form>
+
+                <h3>Login width social medial</h3>
+                <ul class="sci">
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
