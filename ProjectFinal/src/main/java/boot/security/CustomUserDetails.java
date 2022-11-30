@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.User;
 
 public class CustomUserDetails extends User {
 	private String fullname;
-	public CustomUserDetails(String username, String password, Collection<? extends GrantedAuthority> authorities,String fullname) {
-		super(username, password, authorities);
+	public CustomUserDetails(String email, String password, Collection<? extends GrantedAuthority> authorities,String fullname) {
+		super(email, password, authorities);
 		this.fullname = fullname;
 	}
 

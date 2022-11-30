@@ -85,8 +85,8 @@ section{
     margin-top: 1rem;
     border: var(--border);
     background: var(--white);
-    padding: 1rem 3rem;
-    font-size: 1.7rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
     cursor: pointer;
     color: var(--black);
     border-radius: .7rem;
@@ -224,9 +224,11 @@ section{
 }
 
 .header .shopping-cart .box .content h3{
+    word-wrap: break-word;
     color: var(--black);
     font-size: 1.5rem;
     padding-bottom: 1rem;
+    max-width: 15rem;
 }
 
 .header .shopping-cart .box .content span{
@@ -275,6 +277,10 @@ section{
 .header .login-form p a{
     color: var(--main-color);
     text-decoration: underline;
+}
+
+#menu-btn{
+    display: none;
 }
 
 /* .header .icons #search-btn{
@@ -559,6 +565,7 @@ section{
 .shop .slide .content{
     padding: 2rem;
     border-top: var(--border);
+    
 }
 
 .shop .slide .content .stars{
@@ -570,10 +577,15 @@ section{
     color: #eae245;
 }
 
-.shop .slide .content p{
-    font-size: 2rem;
+.shop .slide .content a{
+    font-size: 1.6rem;
     color: var(--black);
     line-height: 2;
+    
+}
+
+.shop .slide .content a:hover{
+    text-decoration: underline;
 }
 
 .shop .slide .content .price{
@@ -593,30 +605,154 @@ section{
   color: #222 !important;
 }
 
+.gallery{
+    background: var(--light-bg);
+}
 
+.gallery .lightbox{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+    gap: 2rem;
+}
 
+.gallery .lightbox a{
+    height: 30rem;
+    overflow: hidden;
+    border: 1rem solid var(--white);
+    box-shadow: var(--box-shadow);
+}
 
+.gallery .lightbox a:hover img{
+    transform: scale(1.1);
+}
 
+.gallery .lightbox a img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
+.arrivals .slide{
+    text-align: center;
+    background: var(--white);
+}
 
+.arrivals .slide:hover .image img{
+    transform: scale(1.1);
+}
 
+.arrivals .slide .image{
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+}
 
+.arrivals .slide .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
+.arrivals .slide .content{
+    padding-top: .5rem;
+}
 
+.arrivals .slide .content p{
+    font-size: 1.6rem;
+    color: var(--black);
+    line-height: 2;
+    padding: .5rem 0;
+}
 
+.arrivals .slide .content .stars{
+    font-size: 1.5rem;
+    color: #eae245;
+    
+}
 
+.arrivals .slide .content .price{
+    font-size: 2rem;
+    color: var(--main-color);
+}
 
+.arrivals .slide .content .price span{
+    color: var(--light-color);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
 
+.footer{
+    background: #ebe7e9;
+}
 
+.footer .box-container{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
 
+.footer .box-container .box{
+    padding: 1rem 0;
+    flex: 1 1 25rem;
+}
 
+.footer .box-container .box .logo{
+    font-size: 3rem;
+    color: var(--green);
+    width: 7rem;
+    border-radius: 50%;
+}
 
+.footer .box-container .box .share a{
+    padding: 0;
+    height: 4rem;
+    width: 4rem;
+    line-height: 3.5rem;
+    text-align: center;
+}
 
+.footer .box-container .box h3{
+    font-size: 2rem;
+    color: var(--black);
+}
 
+.footer .box-container .box p{
+    font-size: 1.3rem;
+    color: #666;
+    padding:.1rem 0;
+}
 
+.footer .box-container .box .links{
+    padding: 1rem 0;
+}
 
+.footer .box-container .box .links a {
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.7rem;
+    color: #333;
+}
 
+.footer .box-container .box .links a:hover{
+    text-decoration: underline;
+    color: var(--green);
+}
 
+.footer .box-container .box form input{
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+
+}
+
+.footer .creadit{
+    margin-top: 3rem;
+    border-top: 0.2rem solid #222;
+} 
 
 
 
@@ -637,6 +773,15 @@ section{
 }
 
 @media (max-width: 768px){
+
+    html{
+        font-size: 50%;
+    }
+
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
 
     .header .navbar-1 a{
         display: none;

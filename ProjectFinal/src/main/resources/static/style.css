@@ -8,7 +8,6 @@
     outline: none;
     border: none;
     text-decoration: none;
-   
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
 }
@@ -19,6 +18,7 @@
     --black:#333;
     --white:#fff;
     --light-color:#666;
+    --light-bg: #f5f5f5;
     --border:.2rem solid var(--black);
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
 }
@@ -67,12 +67,199 @@ section {
 
 /* LOGIN  */
 
+
+.header{
+    padding: .5rem 9%;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0; left: 0; right: 0;
+    position: sticky;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 8rem;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 110%; right: -110%;
+    height: 5rem;
+    width: 50rem;
+    border-radius: .5rem;
+    background: var(--light-bg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+}
+
+.header .search-form.active{
+    right: 2rem;
+    transition: .5s linear;
+}
+
+.header .search-form input{
+    width: 100%;
+    background: none;
+    font-size: 1.6rem;
+    color: var(--light-color);
+    text-transform: none;
+}
+
+.header .search-form label{
+    font-size: 2rem;
+    margin-left: .7rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover{
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.header .navbar-1 a{
+    font-size: 2rem;
+    color: var(--black);
+    margin-left: 2rem;
+    font-weight: 450;
+}
+
+.header .navbar-1 a:hover{
+    color: var(--main-color);
+    letter-spacing: 0.1rem;
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    background: var(--light-bg);
+    color: var(--black);
+    cursor: pointer;
+    font-size: 1.8rem;
+    margin-left: .3rem;
+    border-radius: .5rem;
+}
+ 
+.header .icons div:hover{
+    background: var(--main-color);
+    color: white;
+}
+
+.header .shopping-cart{
+    position: absolute;
+    top: 110%; right: -110%;
+    /* right = 2rem thấy thanh hiện còn bằng -110% ẩn đi  */
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 35rem;
+    background: #fff;
+}
+
+.header .shopping-cart.active{
+    right: 2rem;
+    transition: .5s linear;
+}
+
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.header .shopping-cart .box img{
+    height: 8rem;
+}
+
+.header .shopping-cart .box .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%; right: 2rem;
+    cursor: pointer;
+    color: var(--light-color);
+    transform: translateY(-50%);
+}
+
+.header .shopping-cart .box .fa-trash:hover{
+    color: var(--orange);
+}
+
+.header .shopping-cart .box .content h3{
+    word-wrap: break-word;
+    color: var(--black);
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    max-width: 15rem;
+}
+
+.header .shopping-cart .box .content span{
+    color: var(--light-color);
+    font-size: 1.6rem;
+}
+
+.header .shopping-cart .box .content .quantity{
+    padding-left: 1rem;
+}
+
+.header .shopping-cart .btn{
+    display: block;
+    text-align: center;
+    margin: 2rem 1rem 1rem;
+}
+
+.header .login-form{
+    position: absolute;
+    top: 110%; right: -100%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    text-align: center;
+}
+
+.header .login-form.active{
+    right: 2rem;
+    transition: .3s linear;
+}
+
+.header .login-form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.header .login-form p{
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+}
+
+.header .login-form p a{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+#menu-btn{
+    display: none;
+}
+
 section .Container{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 45%;
-    height: 100%;
+    height: 90%;
     background: var(--white);
     border-radius: 4rem;
 }
@@ -211,6 +398,7 @@ section .Container .FormLogin .sci li:hover{
     background-color: var(--main-color);
 }
 
+/* front end website  */
 
 
 
@@ -235,5 +423,33 @@ section .Container .FormLogin .sci li:hover{
         height: 100%;
         background: var(--white);
         border-radius: 5px;
+    }
+    
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar-1{
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        background-color: var(--white);
+        border-top: var(--border);
+        border-bottom: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+    }
+
+    .header .navbar-1.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .navbar-1 a{
+        display: block;
+        margin: 2rem;
     }
 }

@@ -38,6 +38,8 @@ public class AppController {
 	
 	@RequestMapping("/")
 	public String viewHomePage(@AuthenticationPrincipal CustomUserDetails user ,Model model) {
+		String pageTitle = "Cửa hàng mỹ phẩm";
+		model.addAttribute("pageTitle",pageTitle);
 		if(user == null) {
 			return "redirect:/index?notlogin";
 		}
@@ -72,10 +74,12 @@ public class AppController {
 		}
 		return "redirect:/register?success";
 	}
-	
-	
+
+
 	@RequestMapping("/index")
-	public String viewYeahPage(Model model) {
+	public String homepage(Model model) {
+		String pageTitle = "Cửa hàng mỹ phẩm";
+		model.addAttribute("pageTitle",pageTitle);
 		return "index";
 	}
 	
