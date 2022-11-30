@@ -1,9 +1,12 @@
 package boot.security;
 
+
 import java.util.Collection;
+
 import java.util.stream.Collectors;
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -28,13 +31,19 @@ public class CustomUserDetailsService implements UserDetailsService {
         UserInfo user = userRepository.findByEmail(username);
        
         if(user != null){
-            return new org.springframework.security.core.userdetails.User(user.getEmail()
+        	return new CustomUserDetails(user.getEmail()
                     , user.getPassword(),
                     user.getRoles().stream()
                             .map((role) -> new SimpleGrantedAuthority(role.getRoleName()))
-                            .collect(Collectors.toList()));
+                            .collect(Collectors.toList()),user.getFullName());
+//            return new org.springframework.security.core.userdetails.User(user.getEmail()
+//                    , user.getPassword(),
+//                    user.getRoles().stream()
+//                            .map((role) -> new SimpleGrantedAuthority(role.getRoleName()))
+//                            .collect(Collectors.toList()));
         }else {
             throw new UsernameNotFoundException("Invalid email or password");
         }
     }
+    
 }

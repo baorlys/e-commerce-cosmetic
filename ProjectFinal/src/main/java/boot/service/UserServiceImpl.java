@@ -51,27 +51,48 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public UserInfo save(UserRegistrationDto registrationDto) {
 		UserInfo user = new UserInfo();
-		user.setFullName(registrationDto.getFirstName()+registrationDto.getLastName());
+		user.setFullName(registrationDto.getFullName());
 		user.setEmail(registrationDto.getEmail());
 //		BCryptPasswordEncoder passwordEncoder =(BCryptPasswordEncoder) passwordEncoder1();
 		user.setPassword(passwordEncoder.encode(registrationDto.getPassword()));
 		user.setAddress(null);
 		user.setPoint(0);
 		user.setPhone(null);
-		Role role = roleRepository.findByRoleName("ROLE_ADMIN");
-		 if(role == null){
-	            role = checkRoleExist();
-	        }
+		Role role = roleRepository.findByRoleName("user");
+		if(role == null){
+			role= checkRoleExist();
+		}
 	    user.setRoles(Arrays.asList(role));
 	    
 		return userRepository.save(user);
 	}
 	private Role checkRoleExist(){
         Role role = new Role();
-        role.setRoleName("ROLE_ADMIN");
+        role.setRoleName("user");
         return roleRepository.save(role);
     }
-
+	@Override
+	public UserInfo admin() {
+		UserInfo user = new UserInfo();
+		user.setFullName("admin");
+		user.setEmail("admin@gmail.com");
+		user.setPassword(passwordEncoder.encode("1234"));
+		user.setAddress(null);
+		user.setPoint(0);
+		user.setPhone(null);
+		Role role = roleRepository.findByRoleName("admin");
+		if(role == null){
+			role= checkAdmin();
+		}
+	    user.setRoles(Arrays.asList(role));
+	    
+		return userRepository.save(user);
+	}
+	private Role checkAdmin(){
+        Role role = new Role();
+        role.setRoleName("admin");
+        return roleRepository.save(role);
+    }
 	@Override
 	public UserInfo findUserByEmail(String email) {
 		

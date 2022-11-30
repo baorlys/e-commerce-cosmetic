@@ -5,42 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d37a132a-42b2-471c-b59a-676f7b022986" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/AppMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/config/SpringSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/config/SpringSecurity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/User_info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/dto/UserRegistrationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/dto/UserRegistrationDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/product_info.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/security/CustomUserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/about-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/about-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/home-img-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/home-img-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/home-img-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/home-img-2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/SignIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/SignIn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/SignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/SignUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/yeah.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/yeah.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="main" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -50,25 +61,30 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2Hx1vfaMFDq5sCnJnzgbsYwFmgN" />
+  <component name="ProjectId" id="2IGNoIRj1WVWmqnSDN5i2y4Hhbn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Techzones/Documents/Workplace/IT/Java Technology/Final/java-final/ProjectFinal",
     "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "8ada2542922de2e17a7517b2896b126a"
   }
 }]]></component>
   <component name="RunManager">
@@ -84,11 +100,11 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d37a132a-42b2-471c-b59a-676f7b022986" name="Changes" comment="" />
-      <created>1669212155389</created>
+      <created>1669804137595</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1669212155389</updated>
-      <workItem from="1669212158450" duration="3536000" />
+      <updated>1669804137595</updated>
+      <workItem from="1669804139872" duration="1396000" />
     </task>
     <servers />
   </component>
@@ -100,19 +116,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>

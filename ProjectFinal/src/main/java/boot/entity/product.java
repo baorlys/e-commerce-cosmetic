@@ -1,5 +1,5 @@
 package boot.entity;
 
-public class product {
+public class Product {
 
 }

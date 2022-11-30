@@ -26,21 +26,26 @@ public class SpringSecurity {
                 .antMatchers("/register/**").permitAll()
                 .antMatchers("/index").permitAll()
                 .and()
+                .rememberMe()
+                .key("uniqueAndSecret")
+                .tokenValiditySeconds(3*24*60*60)
+                .and()
                 .formLogin(
                         form -> form
                                 .loginPage("/login")
                                 .loginProcessingUrl("/login")
-                                .defaultSuccessUrl("/yeah")
+                                .defaultSuccessUrl("/index?login")
                                 .permitAll()
                 ).logout(
                         logout -> logout
                         .invalidateHttpSession(true)
                         .clearAuthentication(true)
                         .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                        .logoutSuccessUrl("/login?logout")
+                        .logoutSuccessUrl("/index?notlogin")
                         .permitAll()
 
-        );
+        ) ;
+       
         return http.build();
     }
 }

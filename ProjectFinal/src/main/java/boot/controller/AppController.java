@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import boot.dto.UserRegistrationDto;
 import boot.entity.UserInfo;
+import boot.security.CustomUserDetails;
 import boot.service.UserService;
 
 @Controller
@@ -29,9 +31,17 @@ public class AppController {
 		this.userService = userService;
 	}
 	
+	@RequestMapping("/login")
+	public String Login() {
+		return "SignIn";
+	}
+	
 	@RequestMapping("/")
-	public String viewHomePage(Model model) {
-		return "index";
+	public String viewHomePage(@AuthenticationPrincipal CustomUserDetails user ,Model model) {
+		if(user == null) {
+			return "redirect:/index?notlogin";
+		}
+		return "redirect:/index?login";
 	}
 	@RequestMapping("/register")
     public String showRegistrationForm(Model model){
@@ -57,16 +67,16 @@ public class AppController {
 			return "redirect:/register?fail";
 		}
 		userService.save(userRegistrationDto);
+		if(userService.findUserByEmail("admin@gmail.com") == null) {
+			userService.admin();
+		}
 		return "redirect:/register?success";
 	}
 	
 	
-	@RequestMapping("/yeah")
+	@RequestMapping("/index")
 	public String viewYeahPage(Model model) {
-		return "yeah";
+		return "index";
 	}
-	@RequestMapping("/login")
-	public String Login() {
-		return "SignIn";
-	}
+	
 }
