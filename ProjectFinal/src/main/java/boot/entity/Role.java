@@ -1,6 +1,8 @@
 package boot.entity;
 
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +16,7 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
+@Data
 @Table(name = "role",uniqueConstraints = {@UniqueConstraint(columnNames =  "role_name")})
 public class Role {
 	@Id
@@ -26,42 +29,7 @@ public class Role {
 
 	@ManyToMany(mappedBy = "roles")
     private List<UserInfo> users = new ArrayList<>();
-    
-	public List<UserInfo> getUsers() {
-		return users;
-	}
 
-	public void setUsers(List<UserInfo> users) {
-		this.users = users;
-	}
-
-	
-	public Role(String roleName, List<UserInfo> users) {
-		super();
-		this.roleName = roleName;
-		this.users = users;
-	}
-
-	public Role() {
-		super();
-		this.roleName = "";
-	}
-
-	public long getRoleId() {
-		return roleId;
-	}
-
-	public void setRoleId(long roleId) {
-		this.roleId = roleId;
-	}
-
-	public String getRoleName() {
-		return roleName;
-	}
-
-	public void setRoleName(String roleName) {
-		this.roleName = roleName;
-	}
 	
 	
 }

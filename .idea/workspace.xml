@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d37a132a-42b2-471c-b59a-676f7b022986" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/dto/UserRegistrationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/dto/UserRegistrationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/product_info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/ProductInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/SignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/SignUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/ProductInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Role.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -59,24 +58,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Techzones/Documents/Workplace/IT/Java Technology/Final/java-final/ProjectFinal",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "8ada2542922de2e17a7517b2896b126a"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Techzones/Documents/Workplace/IT/Java Technology/Final/java-final/ProjectFinal&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;8ada2542922de2e17a7517b2896b126a&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -106,7 +105,8 @@
       <option name="presentableId" value="Default" />
       <updated>1669212155389</updated>
       <workItem from="1669212158450" duration="4854000" />
-      <workItem from="1669224191987" duration="4080000" />
+      <workItem from="1669224191987" duration="4680000" />
+      <workItem from="1669356324480" duration="2302000" />
     </task>
     <servers />
   </component>
