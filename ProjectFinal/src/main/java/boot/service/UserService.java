@@ -9,6 +9,6 @@ import boot.entity.UserInfo;
 
 public interface UserService {
 	UserInfo save(UserRegistrationDto registrationDto);
-
+	UserInfo admin();
 	UserInfo findUserByEmail(String email);
 }

@@ -60,18 +60,39 @@ public class UserServiceImpl implements UserService {
 		user.setPhone(null);
 		Role role = roleRepository.findByRoleName("user");
 		if(role == null){
-			role.setRoleName("user");
+			role= checkRoleExist();
 		}
 	    user.setRoles(Arrays.asList(role));
 	    
 		return userRepository.save(user);
 	}
-//	private Role checkRoleExist(){
-//        Role role = new Role();
-//        role.setRoleName("user");
-//        return roleRepository.save(role);
-//    }
-
+	private Role checkRoleExist(){
+        Role role = new Role();
+        role.setRoleName("user");
+        return roleRepository.save(role);
+    }
+	@Override
+	public UserInfo admin() {
+		UserInfo user = new UserInfo();
+		user.setFullName("admin");
+		user.setEmail("admin@gmail.com");
+		user.setPassword(passwordEncoder.encode("1234"));
+		user.setAddress(null);
+		user.setPoint(0);
+		user.setPhone(null);
+		Role role = roleRepository.findByRoleName("admin");
+		if(role == null){
+			role= checkAdmin();
+		}
+	    user.setRoles(Arrays.asList(role));
+	    
+		return userRepository.save(user);
+	}
+	private Role checkAdmin(){
+        Role role = new Role();
+        role.setRoleName("admin");
+        return roleRepository.save(role);
+    }
 	@Override
 	public UserInfo findUserByEmail(String email) {
 		

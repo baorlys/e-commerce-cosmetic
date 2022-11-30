@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h1>Hello</h1>
-	<p>Welcome <span sec:authentication="principal.email">User</span></p>
+	<p>Welcome <span >[[${#request.userPrincipal.principal.FullName}]]</span></p>
 	<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}" >Log out</a></li>
 </body>
 </html>

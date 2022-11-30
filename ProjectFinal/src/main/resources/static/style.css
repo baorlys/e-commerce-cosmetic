@@ -8,7 +8,7 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
+   
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
 }
