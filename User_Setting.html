@@ -25,12 +25,12 @@
 			<a href="" class="logo"><img src="./images/logo.png" alt=""></a>
 	
 			<nav class="navbar-1">
-				<a href="#home">home</a>
-				<a href="#shop">shop</a>
-				<a href="#team">gallery</a>
-				<a href="home">team</a>
-				<a href="#arrivals">arrivals</a>
-				<a href="#blogs">blogs</a>
+				<a href="index.html">home</a>
+				<a href="index.html">shop</a>
+				<a href="index.html">gallery</a>
+				<a href="index.html">team</a>
+				<a href="index.html">arrivals</a>
+				<a href="index.html">blogs</a>
 			</nav>
 	
 			<div class="icons">
@@ -51,9 +51,9 @@
 
 	<section class="py-5 my-5">
 		<div class="container">
-			<h1 class="mb-5">Account Settings</h1>
-			<div class="bg-white shadow rounded-lg d-block d-sm-flex">
-				<div class="profile-tab-nav border-right">
+			<h1>Account Settings</h1>
+			<div class="bg-white shadow rounded-lg d-block d-sm-flex" id="fcn">
+				<div class="ptn profile-tab-nav border-right">
 					<div class="p-4">
 						<div class="img-circle text-center mb-3">
 							<img src="images/802043_man_512x512.png" alt="Image" class="shadow">
@@ -63,23 +63,23 @@
 					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 						<a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab"
 							aria-controls="account" aria-selected="true">
-							<i class="fa fa-home text-center mr-1"></i>
-							Thông tin
+							<i class="icons fa fa-home text-center mr-1"></i>
+							<span class="tag">Thông tin</span>
 						</a>
 						<a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab"
 							aria-controls="password" aria-selected="false">
-							<i class="fa fa-key text-center mr-1"></i>
-							Bảo mật
+							<i class=" icons fa fa-key text-center mr-1"></i>
+							<span class="tag">Bảo mật</span>
 						</a>
 						<a class="nav-link" id="security-tab" data-toggle="pill" href="#security" role="tab"
 							aria-controls="security" aria-selected="false">
-							<i class="fa fa-user text-center mr-1"></i>
-							Lịch sử mua hàng
+							<i class="icons fa fa-user text-center mr-1"></i>
+							<span class="tag">Lịch sử mua hàng</span>
 						</a>
 						<a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab"
 							aria-controls="application" aria-selected="false">
-							<i class="fa fa-tv text-center mr-1"></i>
-							Kết nối
+							<i class="icons fa fa-tv text-center mr-1"></i>
+							<span class="tag">Mạng xã hội</span>
 						</a>
 					</div>
 				</div>
@@ -89,14 +89,14 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Họ</label>
-									<input type="text" class="form-control" value="Đoàn Ngọc">
+									<label>Họ và tên</label>
+									<input type="text" class="form-control" value="Đoàn Ngọc Nam">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label>Tên</label>
-									<input type="text" class="form-control" value="Nam">
+									<label>Địa chỉ</label>
+									<input type="text" class="form-control" value="19 Nguyễn Hữu Thọ">
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -209,6 +209,34 @@
 							</div>
 						</div>
 
+						<div class="row">
+							<div class="container-history-payment">
+								<div class="status">
+									<span><i class="fa-solid fa-truck"></i></span>
+									<p style="padding: 8px; margin-bottom: 0;">Giao hang thanh cong</p>
+								</div>
+								<div class="products-payment">
+									<div class="co-ppi">
+										<img class="products-payment-img" src="images/product-1.jpg" alt="">
+									</div>
+									<div class="description">
+										<p>Mellow Milk Mist-Fourth Ray Beauty</p>
+										<span><b><i>x1</i></b></span>
+									</div>
+									<div class="cost">
+										<p>9.99$</p>
+									</div>
+								</div>
+								<div class="total">
+									<p>
+										Total:
+										<span>
+											9.99$
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="tab-pane fade" id="application" role="tabpanel" aria-labelledby="application-tab">
 						<h3 class="mb-4 col-12">Connect us on social media</h3>
@@ -233,11 +261,13 @@
 						</div>
 
 					</div>
+					
 				</div>
 			</div>
 	</section>
 
 
+	<script src="./JS_IN_UP.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

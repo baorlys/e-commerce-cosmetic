@@ -1,16 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
-*{
-  text-decoration: none;
-  text-transform: capitalize;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+* {
+    font-family: 'Poppins', sans-serif;
+    /* margin: 0;
+    padding: 0; */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* outline: none; */
+    border: none;
+    text-decoration: none;
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
 }
+
 body {
 
 	font-family: "Roboto", sans-serif;
-	
-}
-body{
   background: linear-gradient(120deg, rgb(41 140 185), rgb(207 79 175));
 }
 
@@ -19,12 +23,12 @@ body{
 :root{
   --main-color:#e84393;
   --font_login: #607d8b;
-  --black:#222;
+  --black:#333;
   --white:#fff;
-  --light-color:#777;
+  --light-color:#666;
   --light-bg: #f5f5f5;
   --border:.2rem solid var(--black);
-  --box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
 }
 
 html {
@@ -34,16 +38,34 @@ html {
   scroll-padding-top: 6rem; */
 }
 
+/* section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  padding: 5rem 9%;
+  justify-content: center;
+} */
+
 .shadow {
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  height: 90%;
 }
 
 .profile-tab-nav {
 	min-width: 250px;
 }
 
+.profile-tab-nav h4{
+  font-size: 2rem;
+}
+
 .tab-content {
 	flex: 1;
+}
+
+.tab-content h3{
+  font-size: 2rem;
 }
 
 .form-group {
@@ -157,8 +179,11 @@ html {
 .container-history-payment{
   background-color: #f7f7f7;
   box-sizing: border-box;
+  margin-bottom: 10px;
   padding: 10px;
   width: 100%;
+  border: 1px solid lightslategray;
+  border-radius: 20px;
 }
 
 .co-ppi{
@@ -351,4 +376,52 @@ html {
 .navbar a:hover{
   color: var(--main-color);
   letter-spacing: .2rem;
+}
+
+a:hover{
+  background-color: #46c1f6;
+}
+
+#menu-btn{
+  display: none;
+}
+
+@media (max-width: 786px)
+{   
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar-1{
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        background-color: var(--white);
+        border-top: var(--border);
+        border-bottom: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+    }
+
+    .header .navbar-1.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .navbar-1 a{
+        display: block;
+        margin: 2rem;
+    }
+}
+label{
+  font-size: 1.4em;
+}
+input{
+  font-size: 1.4em;
+}
+.tag{
+  font-size: 1.4em;
 }
