@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link css  -->
+    <link rel="stylesheet" href="./style1.css">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+</head>
+<body>
+    <!-- header start  -->
+    <header class="header">
+        <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
+
+        <nav class="navbar-1">
+            <a href="#home">Trang Chủ</a>
+            <a href="#shop">Cửa Hàng</a>
+            <a href="#team">Phản hồi</a>
+            <a href="#arrivals">Sản phẩm mới</a>
+            <a href="#footer">Liên Lạc</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="cart-btn" href="#" class="fas fa-shopping-cart"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here ..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="./images/product-1.jpg" alt="">
+                <div class="content">
+                    <h3>Xịt Tẩy Tế Bào Chết</h3>
+                    <span class="price">$4.99/-</span>
+                    <span class="quantity">qty : 1</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="./images/product-2.jpg" alt="">
+                <div class="content">
+                    <h3>Son SOC</h3>
+                    <span class="price">$4.99/-</span>
+                    <span class="quantity">qty : 1</span>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="./images/product-3.jpg" alt="">
+                <div class="content">
+                    <h3>Mặt nạ bột</h3>
+                    <span class="price">$4.99/-</span>
+                    <span class="quantity">qty : 1</span>
+                </div>
+            </div>
+
+            <a href="#" class="btn">Xem giỏ hàng</a>
+        </div>
+
+        <form action="" class="login-form">
+            <h3>login form</h3>
+            <p>Bấm vào đây để <a href="SignIn.html">Đăng Nhập</a> </p>
+            <p>Nếu bạn chưa có tài khoản bấm<a href="SignUp.html"> Đăng Ký</a> </p>
+        </form>
+    </header>
+    <!-- header end -->
+
+    <!-- navbar section  -->
+    <nav class="navbar">
+        <div id="close-navbar" class="fas fa-times"></div>
+        <a href="#home">home</a>
+        <a href="#shop">shop</a>
+        <a href="#team">gallery</a>
+        <a href="home">team</a>
+        <a href="#arrivals">arrivals</a>
+        <a href="#blogs">blogs</a>
+    </nav>
+    <!-- navbar section ends -->
+
+    <!-- home section start  -->
+    <div class="home" id="home">
+
+        <div class="slide active">
+            <div class="content">
+                <img src="./images/content-img-1.png" alt="">
+                <span>new arrivals 2022</span>
+                <h3>cosmetics</h3>
+                <a href="#" class="btn">read more</a>
+                <div class="controls">
+                    <div class="fas fa-angle-left" onclick="prev()"></div>
+                    <div class="fas fa-angle-right" onclick="next()"></div>
+                </div>
+            </div>
+            
+            <div class="image">
+                <img src="./images/home-img-1.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <img src="./images/content-img-2.png" alt="">
+                <span>new arrivals 2022</span>
+                <h3>accessories</h3>
+                <a href="#" class="btn">read more</a>
+                <div class="controls">
+                    <div class="fas fa-angle-left" onclick="prev()"></div>
+                    <div class="fas fa-angle-right" onclick="next()"></div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="./images/home-img-2.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <img src="./images/content-img-3.png" alt="">
+                <span>new collections</span>
+                <h3>skin care</h3>
+                <a href="#" class="btn">read more</a>
+                <div class="controls">
+                    <div class="fas fa-angle-left" onclick="prev()"></div>
+                    <div class="fas fa-angle-right" onclick="next()"></div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="./images/home-img-3.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- home section ends  -->
+    
+    <!-- category section starts   -->
+    <section class="category">
+
+        <a href="" class="box">
+            <img src="./images/category-1.png" alt="">
+            <p>cosmetics</p>
+        </a>
+
+        <a href="" class="box">
+            <img src="./images/category-2.png" alt="">
+            <p>makeup</p>
+        </a>
+
+        <a href="" class="box">
+            <img src="./images/category-3.png" alt="">
+            <p>powder</p>
+        </a>
+
+        <a href="" class="box">
+            <img src="./images/category-4.png" alt="">
+            <p>lotions</p>
+        </a>
+
+        <a href="" class="box">
+            <img src="./images/category-5.png" alt="">
+            <p>lipstick</p>
+        </a>
+
+        <a href="" class="box">
+            <img src="./images/category-6.png" alt="">
+            <p>mascara</p>
+        </a>
+
+    </section>
+    <!-- category section ends   -->
+
+    <!-- about section starts  -->
+    <section class="about" id="about">
+
+        <div class="content">
+            <span>Tại sao phụ nữ cần làm đẹp mỗi ngày?</span>
+            <h3>makeup & skin care</h3>
+            <p>Các cụ thường có câu: “Tốt gỗ hơn tốt nước sơn” là muốn nhấn mạnh việc làm đẹp tâm hồn, tính cách quan trọng hơn việc làm đẹp bề ngoài. Tuy nhiên, hiện nay nhiều chị em đã ý thức được việc làm đẹp từ cách chú trọng thể hiện ý thức, vẻ đẹp tâm hồn đến việc khéo léo sử dụng trạng phục, rèn luyện sức khỏe, thân hình, chăm sóc làn da ...</p>
+            <a href="https://thethao360.vn/tai-sao-phai-lam-dep/" class="btn">Đọc Thêm</a>
+        </div>
+
+    </section>
+    <!-- about section ends  -->
+
+    <!-- shop section starts  -->
+    <section class="shop" id="shop">
+
+        <div class="heading">
+            <h1>Sản phẩm Giảm Giá</h1>
+            <p>Mỹ phẩm là những chất hoặc sản phẩm được dùng để trang điểm hoặc thay đổi diện mạo hoặc mùi hương cơ thể người. Nhiều mỹ phẩm được thiết kế để sử dụng cho mặt và tóc. Chúng thường là hỗn hợp các hợp chất hóa học; một số xuất phát từ nguồn gốc tự nhiên (như dầu dừa) và một số được tổng hợp.[1] Các loại mỹ phẩm phổ biến gồm có son môi, mascara, phấn mắt, kem nền, phấn má hồng, phấn phủ, sữa rửa mặt và sữa dưỡng thể, dầu gội, sản phẩm tạo kiểu tóc (gel vuốt tóc, gôm xịt tóc,...), nước hoa. Mỹ phẩm thường được thoa lên mặt để làm nổi bật diện mạo nên còn được gọi là đồ trang điểm hay đồ hóa trang.</p>
+
+        </div>
+        <div class="swiper products-slider">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <span class="discount">-25%</span>
+                        <img src="./images/product-1.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="">Xịt Tẩy Tế Bào Chết </a>
+                        <div class="price">180.000đ <span>250.000đ</span></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <span class="discount">-25%</span>
+                        <img src="./images/product-2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="">Son Soc đỏ đô</a>
+                        <div class="price">150.000đ <span>199.000đ</span></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <span class="discount">-25%</span>
+                        <img src="./images/product-3.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="">Mặt Nạ Bột</a>
+                        <div class="price">300.000đ <span>350.000đ</span></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <span class="discount">-25%</span>
+                        <img src="./images/product-4.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="">Sửa rửa mặt làm trắng da</a>
+                        <div class="price">130.000đ <span>150.000đ</span></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <span class="discount">-25%</span>
+                        <img src="./images/product-5.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="">Phấn nâu đậm</a>
+                        <div class="price">180.000đ <span>300.000đ</span></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <span class="discount">-25%</span>
+                        <img src="./images/product-6.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="">Xà bông tắm tẩy mụn</a>
+                        <div class="price">150.000đ <span>250.000đ</span></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <span class="discount">-25%</span>
+                        <img src="./images/product-7.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="">Kem đưỡng trắng cho da mặt</a>
+                        <div class="price">150.000đ <span>180.000đ</span></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <span class="discount">-25%</span>
+                        <img src="./images/product-8.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-shopping-cart"></a>
+                            <a href="#" class="fas fa-heart"></a>
+                            <a href="#" class="fas fa-share"></a>
+                            
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="">Kem trị mụn thâm</a>
+                        <div class="price">200.00đ <span>250.000đ</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <!-- shop section ends  -->
+
+    <!-- gallery section starts  -->
+    <section class="gallery" id="gallery">
+
+        <div class="heading">
+            <h1>Hướng Dẫn Sử Dụng</h1>
+            <p>Nếu biết cách sử dụng mỹ phẩm thông minh, làn da của bạn sẽ khỏe đẹp tự nhiên mà không phải tốn kém quá nhiều. Thế nhưng, bạn cũng có thể sẽ “hẹn hò” với bác sĩ da liễu nếu mắc phải một số sai lầm khi dùng mỹ phẩm đấy!</p>
+        </div>
+
+        <div class="lightbox">
+            <a href="./images/img-1.jpg"><img src="./images/img-1.jpg" alt=""></a>
+            <a href="./images/img-2.jpg"><img src="./images/img-2.jpg" alt=""></a>
+            <a href="./images/img-3.jpg"><img src="./images/img-3.jpg" alt=""></a>
+            <a href="./images/img-4.jpg"><img src="./images/img-4.jpg" alt=""></a>
+            <a href="./images/img-5.jpg"><img src="./images/img-5.jpg" alt=""></a>
+            <a href="./images/img-6.jpg"><img src="./images/img-6.jpg" alt=""></a>
+        </div>
+    </section>
+    <!-- gallery section ends  -->
+
+    <!-- arrivals section starts  -->
+    <section class="arrivals" id="arrivals">
+
+        <div class="heading">
+            <h1>Sản Phẩm Mới</h1>
+            <p>22 COSMETIC luôn cập nhật những sản phẩm chăm sóc và bảo vệ da mới nhất theo tiêu chí an toàn và hiệu quả cho người sử dụng.</p>
+        </div>
+
+
+        <div class="swiper arrivals-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="./images/arrival-1.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p>Son pink màu hồng kem</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">280.000đ <span>360.000đ</span></div>
+                        <a href="#" class="btn">Thêm vào Giỏ Hàng</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="./images/arrival-2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p>kẻ chân mày black pink</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">200.000đ <span>250.000đ</span></div>
+                        <a href="#" class="btn">Thêm vào Giỏ Hàng</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="./images/arrival-3.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p>Kem dưỡng trắng da</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">180.000đ <span>150.000đ</span></div>
+                        <a href="#" class="btn">Thêm vào Giỏ Hàng</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="./images/arrival-4.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p>Son quý tộc</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">360.000đ <span>400.000đ</span></div>
+                        <a href="#" class="btn">Thêm vào Giỏ Hàng</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="./images/arrival-6.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p>Thuốc xịt tế bào chết</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">250.000đ <span>270.000đ</span></div>
+                        <a href="#" class="btn">Thêm vào Giỏ Hàng</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="./images/arrival-5.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p>Kẻ đánh phấn</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">80.000đ <span>150.000đ</span></div>
+                        <a href="#" class="btn">Thêm vào Giỏ Hàng</a>
+                    </div>
+                </div>
+
+                
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="./images/arrival-7.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p>Kem trắng body</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">150.000đ <span>200.000đ</span></div>
+                        <a href="#" class="btn">Thêm vào Giỏ Hàng</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="./images/arrival-8.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <p>Cọ đánh má hồng</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">90.000đ <span>120.000đ</span></div>
+                        <a href="#" class="btn">Thêm vào Giỏ Hàng</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+    </section>
+    <!-- arrivals section ends  -->
+
+    <section id="footer" class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <img class="logo" src="./images/logo.png" alt="">
+                    <p>1111 Tô Hiến Thành, P.14, Q.10, HCM</p>
+                    <p>Email: 22cosmetic@milem.vn</p>
+                    <p>Hotline: 0933.333.451</p>
+                    <p>Giờ làm việc</p>
+                    <p>Thứ 2 - Thứ 7: 10:00 - 21:30 Chủ Nhật: 12:30 - 21:30</p>
+                
+                <div class="share">
+                    <a href="#" class="btn fab fa-facebook-f"></a>
+                    <a href="#" class="btn fab fa-twitter"></a>
+                    <a href="#" class="btn fab fa-instagram"></a>
+                    <a href="#" class="btn fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Menu</h3>
+                <div class="links">
+                    <a href="#">Sản phẩm</a>
+                    <a href="#">Hàng mới về</a>
+                    <a href="#">Thương Hiệu</a>
+                    <a href="#">Cửa hàng</a>
+                    <a href="#">The spa</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Thông tin và hướng dẫn</h3>
+                <div class="links">
+                    <a href="#">Hình thức thanh toán</a>
+                    <a href="#">Chính sách bảo mật</a>
+                    <a href="#">Điều khoản sử dụng</a>
+                    <a href="#">Chuyển khoản qua ngân hàng</a>
+                    <a href="#">Chính sách vận chuyển</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Đăng kí email</h3>
+                <p>Hãy kiểm tra email của bạn để biết thêm thông tin về khuyến mãi</p>
+                <form action="">
+                    <input type="email" name="" placeholder="enter your email" id="" class="email">
+                    
+                </form>
+            </div>
+        </div>
+        <div class="creadit"></div>
+    </section>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./JS.js"></script>
+
+    <script>
+        lightGallery(document.querySelector('.gallery .lightbox'));
+    </script>
+</body>
+</html>
