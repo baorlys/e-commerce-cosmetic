@@ -77,11 +77,16 @@
         <a href="#" class="btn">Xem giỏ hàng</a>
     </div>
 
-    <form action="" class="login-form">
-        <h3>login form</h3>
-        <p>Bấm vào đây để <a href="login">Đăng Nhập</a> </p>
-        <p>Nếu bạn chưa có tài khoản bấm<a href="register"> Đăng Ký</a> </p>
-    </form>
+     <form action="" class="login-form" th:if="${param.login}">
+           <p>Welcome <span >[[${#request.userPrincipal.principal.FullName}]]</span></p>
+           <a th:href = "account">Chỉnh sửa thông tin cá nhân</a>
+			<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}" >Log out</a></li>
+        </form>
+        <form action="" class="login-form" th:if="${user == null}">
+           <h3>login form</h3>
+            <p>Bấm vào đây để <a href="login">Đăng Nhập</a> </p>
+            <p>Nếu bạn chưa có tài khoản bấm<a href="register"> Đăng Ký</a> </p>
+        </form>
 </header>
 
 

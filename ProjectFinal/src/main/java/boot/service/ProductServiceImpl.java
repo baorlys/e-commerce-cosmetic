@@ -1,6 +1,6 @@
 package boot.service;
 
-import boot.entity.Product;
+import boot.entity.Products;
 import boot.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,52 +12,52 @@ public class ProductServiceImpl implements ProductService{
     private ProductRepository productRepository;
 
     @Override
-    public boolean create(Product object) {
+    public boolean create(Products object) {
         return false;
     }
 
     @Override
-    public boolean update(Product object) {
+    public boolean update(Products object) {
         return false;
     }
 
     @Override
-    public boolean delete(Product object) {
+    public boolean delete(Products object) {
         return false;
     }
 
     @Override
-    public Product findById(long productId) {
+    public Products findById(long productId) {
         return null;
     }
 
     @Override
-    public List<Product> getAll() {
+    public List<Products> getAll() {
         return productRepository.findAll();
     }
 
     @Override
-    public List<Product> getListByCategory(long categoryId) {
+    public List<Products> getListByCategory(long categoryId) {
         return null;
     }
 
     @Override
-    public List<Product> getListByCategoryAndLimit(long categoryId, int limit) {
+    public List<Products> getListByCategoryAndLimit(long categoryId, int limit) {
         return null;
     }
 
     @Override
-    public List<Product> getListFeatured(int limit) {
+    public List<Products> getListFeatured(int limit) {
         return null;
     }
 
     @Override
-    public List<Product> getListSale(int limit) {
+    public List<Products> getListSale(int limit) {
         return null;
     }
 
     @Override
-    public List<Product> getListNav(int start, int limit) {
+    public List<Products> getListNav(int start, int limit) {
         return null;
     }
 }

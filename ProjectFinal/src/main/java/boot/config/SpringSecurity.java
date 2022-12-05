@@ -41,7 +41,7 @@ public class SpringSecurity {
                         .invalidateHttpSession(true)
                         .clearAuthentication(true)
                         .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                        .logoutSuccessUrl("/index?notlogin")
+                        .logoutSuccessUrl("/index")
                         .permitAll()
 
         ) ;

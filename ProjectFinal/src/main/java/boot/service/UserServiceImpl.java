@@ -58,6 +58,7 @@ public class UserServiceImpl implements UserService {
 		user.setAddress(null);
 		user.setPoint(0);
 		user.setPhone(null);
+		user.setResetPasswordToken(null);
 		Role role = roleRepository.findByRoleName("user");
 		if(role == null){
 			role= checkRoleExist();
@@ -80,6 +81,7 @@ public class UserServiceImpl implements UserService {
 		user.setAddress(null);
 		user.setPoint(0);
 		user.setPhone(null);
+		user.setResetPasswordToken(null);
 		Role role = roleRepository.findByRoleName("admin");
 		if(role == null){
 			role= checkAdmin();
@@ -95,8 +97,37 @@ public class UserServiceImpl implements UserService {
     }
 	@Override
 	public UserInfo findUserByEmail(String email) {
-		
 		return userRepository.findByEmail(email);
+	}
+
+
+	@Override
+	public void updateResetPasswordToken(String token, String email) throws Exception {
+		UserInfo user = userRepository.findByEmail(email);
+		if(user != null) {
+			user.setResetPasswordToken(token);
+			userRepository.save(user);
+		}else {
+			throw new Exception("Could not find any user with the email "+email);
+		}
+		
+	}
+
+
+	@Override
+	public UserInfo getByResetPasswordToken(String token) {
+		
+		return userRepository.findByResetPasswordToken(token);
+	}
+
+
+	@Override
+	public void updatePassword(UserInfo user, String newPassword) {
+		String endcodedPassword = passwordEncoder.encode(newPassword);
+		user.setPassword(endcodedPassword);
+		
+		user.setResetPasswordToken(null);
+		userRepository.save(user);
 	}
 
 

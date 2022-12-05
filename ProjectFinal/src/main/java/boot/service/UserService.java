@@ -11,4 +11,7 @@ public interface UserService {
 	UserInfo save(UserRegistrationDto registrationDto);
 	UserInfo admin();
 	UserInfo findUserByEmail(String email);
+	void updateResetPasswordToken(String token, String email) throws Exception;
+	UserInfo getByResetPasswordToken(String token);
+	void updatePassword(UserInfo customer, String newPassword);
 }

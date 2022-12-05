@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @Table(name = "products")
-public class Product {
+public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id", nullable = false)
@@ -19,7 +19,7 @@ public class Product {
     @Column(name = "price")
     private float price;
 
-    @Column(name = "brand")
+    @Column(name = "brand", length = 500)
     private String brand;
 
     @Column(name = "supplier")
@@ -28,7 +28,7 @@ public class Product {
     @Column(name = "amount")
     private int amount;
 
-    @Column(name = "desc")
+    @Column(name = "description")
     private String desc;
 
     @Column(name = "pic")
