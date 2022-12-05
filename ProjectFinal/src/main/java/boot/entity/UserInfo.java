@@ -44,6 +44,9 @@ public class UserInfo {
 	@Column(name = "point")
 	private int point;
 	
+	@Column(name = "reset_password_token")
+	private String resetPasswordToken;
+	
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
         name = "users",
@@ -51,33 +54,6 @@ public class UserInfo {
         inverseJoinColumns = @JoinColumn(
             name = "role_id", referencedColumnName = "role_id"))
     private Collection < Role > roles;
-
-	
-
-	public UserInfo(String full_name, String email, String password, String address, String phone,
-			int point, Collection<Role> roles) {
-		super();
-		
-		this.fullName = full_name;
-		this.email = email;
-		this.password = password;
-		this.address = address;
-		this.phone = phone;
-		this.point = point;
-		this.roles = roles;
-	}
-
-	public UserInfo() {
-		super();
-		this.fullName = "";
-		this.email = "";
-		this.password = "";
-		this.address = "";
-		this.phone = "";
-		this.point = 0;
-		this.roles = null;
-	}
-
 
 	
 }

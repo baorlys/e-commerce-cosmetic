@@ -29,7 +29,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         UserInfo user = userRepository.findByEmail(username);
-       
+      
         if(user != null){
         	return new CustomUserDetails(user.getEmail()
                     , user.getPassword(),
@@ -45,5 +45,6 @@ public class CustomUserDetailsService implements UserDetailsService {
             throw new UsernameNotFoundException("Invalid email or password");
         }
     }
+
     
 }
