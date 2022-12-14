@@ -1,0 +1,456 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+:root{
+    --main-color:#e84393;
+    --font_login: #607d8b;
+    --black:#333;
+    --white:#fff;
+    --light-color:#666;
+    --light-bg: #f5f5f5;
+    --border:.2rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+body{
+    background: linear-gradient(120deg, rgb(41 140 185), rgb(207 79 175));
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+/* .btn{
+    padding:.7rem 2rem;
+    font-size: 1.7rem;
+    background: var(--main-color);
+    color: var(--white);
+    cursor: pointer;
+    margin-top: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+} */
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+  
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 5rem 9%;
+    justify-content: center;
+}
+
+/* LOGIN  */
+
+
+.header{
+    padding: .5rem 9%;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0; left: 0; right: 0;
+    position: sticky;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 8rem;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 110%; right: -110%;
+    height: 5rem;
+    width: 50rem;
+    border-radius: .5rem;
+    background: var(--light-bg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+}
+
+.header .search-form.active{
+    right: 2rem;
+    transition: .5s linear;
+}
+
+.header .search-form input{
+    width: 100%;
+    background: none;
+    font-size: 1.6rem;
+    color: var(--light-color);
+    text-transform: none;
+}
+
+.header .search-form label{
+    font-size: 2rem;
+    margin-left: .7rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover{
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.header .navbar-1 a{
+    font-size: 2rem;
+    color: var(--black);
+    margin-left: 2rem;
+    font-weight: 450;
+}
+
+.header .navbar-1 a:hover{
+    color: var(--main-color);
+    letter-spacing: 0.1rem;
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    background: var(--light-bg);
+    color: var(--black);
+    cursor: pointer;
+    font-size: 1.8rem;
+    margin-left: .3rem;
+    border-radius: .5rem;
+}
+ 
+.header .icons div:hover{
+    background: var(--main-color);
+    color: white;
+}
+
+.header .shopping-cart{
+    position: absolute;
+    top: 110%; right: -110%;
+    /* right = 2rem thấy thanh hiện còn bằng -110% ẩn đi  */
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width: 35rem;
+    background: #fff;
+}
+
+.header .shopping-cart.active{
+    right: 2rem;
+    transition: .5s linear;
+}
+
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.header .shopping-cart .box img{
+    height: 8rem;
+}
+
+.header .shopping-cart .box .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%; right: 2rem;
+    cursor: pointer;
+    color: var(--light-color);
+    transform: translateY(-50%);
+}
+
+.header .shopping-cart .box .fa-trash:hover{
+    color: var(--orange);
+}
+
+.header .shopping-cart .box .content h3{
+    word-wrap: break-word;
+    color: var(--black);
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    max-width: 15rem;
+}
+
+.header .shopping-cart .box .content span{
+    color: var(--light-color);
+    font-size: 1.6rem;
+}
+
+.header .shopping-cart .box .content .quantity{
+    padding-left: 1rem;
+}
+
+.header .shopping-cart .btn{
+    display: block;
+    text-align: center;
+    margin: 2rem 1rem 1rem;
+}
+
+.header .login-form{
+    position: absolute;
+    top: 110%; right: -100%;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    text-align: center;
+}
+
+.header .login-form.active{
+    right: 2rem;
+    transition: .3s linear;
+}
+
+.header .login-form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.header .login-form p{
+    font-size: 1.4rem;
+    padding: .5rem 0;
+    color: var(--light-color);
+}
+
+.header .login-form p a{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+#menu-btn{
+    display: none;
+}
+
+section .Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 90%;
+    background: var(--white);
+    border-radius: 4rem;
+}
+
+section .Container .FormLogin{
+    width: 70%;
+}
+
+
+section .Container .FormLogin .FormLogin_logo{
+    display: flex;
+}
+
+section .Container .FormLogin .logo {
+    font-size: 3rem;
+    margin-right: 1rem;
+    color: var(--main-color);
+}
+
+
+
+section .Container .FormLogin h2{ 
+    color: #607d8b;
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid var(--main-color);
+    display: inline-block;
+    letter-spacing: 0.1px;
+}
+
+section .Container .FormLogin form .InputForm{
+    margin-bottom: 2rem;
+}
+
+section .Container .FormLogin form .showHidePw {
+    float: right;
+    list-style-type: none;
+    margin-top: -3.2rem;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+} 
+
+section .Container .FormLogin .InputForm span{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    color: var(--font_login);
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+section .Container .FormLogin .InputForm input{
+    width: 100%;
+    outline: none;
+    padding: 10px 20px;
+    font-weight: 400;
+    border: 1px solid var(--font_login);
+    font-size: 1.3rem;
+    letter-spacing: 0.1px;
+    color: var(--font_login);
+    background-color: transparent;
+    border-radius: 3rem;
+}
+
+section .Container .FormLogin .InputForm input:hover{
+    border: 1px solid #000000;
+}
+
+section .Container .FormLogin .InputForm input[type = "submit"]
+{
+    background-color: var(--main-color);
+    color: var(--white);
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+section .Container .FormLogin .InputForm input[type = "submit"]:hover{
+    background-color: #d61d77;
+    font-size: 1.6rem;
+
+}
+
+section .Container .FormLogin .remember{
+    margin-bottom: 1rem;
+    color: var(--font_login);
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+section .Container .FormLogin .InputForm p{
+    color: var(--font_login);
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+section .Container .FormLogin .InputForm p a{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+section .Container .FormLogin h3{
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+section .Container .FormLogin .sci{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .Container .FormLogin .sci li{
+    list-style: none;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--font_login);
+    border-radius: 50%;
+    margin: 0 0.7rem;
+    cursor: pointer;
+    font-size: 1.9rem;
+}
+
+section .Container .FormLogin .sci li:hover{
+    background-color: var(--main-color);
+}
+
+/* front end website  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* reponsive device  */
+@media (max-width: 786px)
+{
+    section .Container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: 100%;
+        background: var(--white);
+        border-radius: 5px;
+    }
+    
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar-1{
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        background-color: var(--white);
+        border-top: var(--border);
+        border-bottom: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+    }
+
+    .header .navbar-1.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .navbar-1 a{
+        display: block;
+        margin: 2rem;
+    }
+}
+
