@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a3fe8c29cc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
+    <!-- Font Awesome 5.15.1 CSS
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- header start  -->
+    <header class="header">
+        <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
+
+        <nav class="navbar-1">
+            <a href="index.html">home</a>
+            <a href="index.html">shop</a>
+            <a href="index.html">gallery</a>
+            <a href="index.html">team</a>
+            <a href="index.html">arrivals</a>
+            <a href="index.html">blogs</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <div class="fas fa-user" id="login-btn"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here ..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </header>
+    <!-- header end -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="first">
+
+
+                    <div class="img">
+                        <img src="images/product-1.jpg" alt="">
+                    </div>
+
+                    <div class="share">
+                        <p>Chia sẻ: </p>
+
+                        <div class="cn">
+                            <ul class="wrapper">
+                                <a href="#" class="icon fb">
+                                    <div class="tooltip">Facebook</div>
+                                    <span><i class="fab fa-facebook-f"></i></span>
+                                </a>
+                                <a href="#" class="icon tw">
+                                    <div class="tooltip">Twiter</div>
+                                    <span><i class="fab fa-twitter"></i></span>
+                                </a>
+                                <a href="#" class="icon ins">
+                                    <div class="tooltip">Instagram</div>
+                                    <span><i class="fab fa-instagram"></i></span>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="setorder">
+                        <h4>Set Order</h4>
+                        <div class="select">
+                            <img src="images/product-1.jpg" alt="">
+                            <p>Select quantity</p>
+                        </div>
+                        <div class="stock">
+                            <div class="quantity">
+                                <input type="button" value="-" class="minus" onclick="minus()">
+                                <input type="text  " name="" id="number" min="1" value="1">
+                                <input type="button" value="+" class="add" onclick="add()">
+                            </div>
+                            <p>Stock: <span class="conf">100</span></p>
+                        </div>
+                        <div class="total">
+                            <p>Total price: </p>
+                            <p>$<span class="hmuch">45.00</span></p>
+                        </div>
+                        <div class="total">
+                            <p>Shipping: </p>
+                            <p style="color: rgb(44, 43, 43);">Free ship international</p>
+                        </div>
+                        <a href="#" class="primary_button">Proceed to checkout</a><br>
+                        <a href="#" class="secondary_button">Countinue shopping</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+
+                <div class="description">
+                    <div class="name">
+                        <h3>Sản phẩm kem bôi thần thánh trẻ ra 50 tuổi cho người dưới 20 tuổi</h3>
+                    </div>
+                    <div class="tabs">
+                        <input type="radio" id="tab1" name="tab-control" checked>
+                        <input type="radio" id="tab2" name="tab-control">
+                        <ul>
+                            <li title="Features"><label for="tab1" role="button"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+                                    </svg><br><span>Infomation</span></label></li>
+                            <li title="Delivery Contents"><label for="tab2" role="button"><svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M14,2A8,8 0 0,0 6,10A8,8 0 0,0 14,18A8,8 0 0,0 22,10H20C20,13.32 17.32,16 14,16A6,6 0 0,1 8,10A6,6 0 0,1 14,4C14.43,4 14.86,4.05 15.27,4.14L16.88,2.54C15.96,2.18 15,2 14,2M20.59,3.58L14,10.17L11.62,7.79L10.21,9.21L14,13L22,5M4.93,5.82C3.08,7.34 2,9.61 2,12A8,8 0 0,0 10,20C10.64,20 11.27,19.92 11.88,19.77C10.12,19.38 8.5,18.5 7.17,17.29C5.22,16.25 4,14.21 4,12C4,11.7 4.03,11.41 4.07,11.11C4.03,10.74 4,10.37 4,10C4,8.56 4.32,7.13 4.93,5.82Z" />
+                                    </svg><br><span>Review</span></label></li>
+                        </ul>
+
+                        <!-- <div class="slider">
+                            <div class="indicator"></div>
+                        </div> -->
+                        <div class="content">
+                            <section>
+                                <h2>Infomation</h2>
+                                <div class="infomation">
+                                    <!-- ID -->
+                                    <p><span class="type">ID: </span> P1HK908</p>
+                                    <!-- Description -->
+                                    <p><span class="type">Descriptions: </span>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum?
+                                        Eaque
+                                        repudiandae architecto libero reprehenderit aliquam magnam ratione quidem? Nobis
+                                        doloribus molestiae enim deserunt necessitatibus eaque quidem incidunt
+                                    </p>
+                                    <!-- Branch -->
+                                    <p><span class="type">Branch: </span> Horient</p>
+                                    <!-- Supplier -->
+                                    <p><span class="type">Sipplier: </span> P1HK908</p>
+                                    <!-- Report -->
+                                    <p>Any problem with this product? <span class="rp"> <i
+                                                class="fas fa-solid fa-flag"></i> Report </span> </p>
+                                </div>
+                            </section>
+                            <section>
+                                <h2>Review</h2>
+                                <p><span class="type">Tell us about your feeling? </span></p>
+                                <div class="rating">
+                                    <input type="radio" name="star" /><span class="star"> </span>
+                                    <input type="radio" name="star" /><span class="star"> </span>
+                                    <input type="radio" name="star" /><span class="star"> </span>
+                                    <input type="radio" name="star" /><span class="star"> </span>
+                                    <input type="radio" name="star" /><span class="star"> </span><span
+                                        class="emo"></span>
+                                </div>
+                                <p><span class="type">Rated: </span> 4.3/5.0 (23 reviewer)</p>
+
+
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
