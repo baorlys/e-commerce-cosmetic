@@ -5,16 +5,21 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import boot.dto.UserRegistrationDto;
 import boot.entity.UserInfo;
+import boot.repository.UserRepository;
 import boot.security.CustomUserDetails;
 import boot.service.UserService;
 
@@ -27,9 +32,9 @@ public class AppController {
 	
 	@Autowired
 	private UserRepository userRepository;
-
+	
 	private PasswordEncoder passwordEncoder;
-
+	
 	public AppController(UserService userService,PasswordEncoder passwordEncoder) {
 		super();
 		this.userService = userService;
@@ -47,12 +52,12 @@ public class AppController {
 		model.addAttribute("pageTitle",pageTitle);
 		model.addAttribute("user", user);
 		if(user == null) {
-
+			
 			return "redirect:/index";
 		}
 		return "redirect:/index?login";
 	}
-
+	
 	@RequestMapping("/account")
 	public ModelAndView viewAccount(@AuthenticationPrincipal CustomUserDetails user,Model model) {
 		ModelAndView mav = new ModelAndView("User_Setting");
@@ -60,12 +65,12 @@ public class AppController {
 		mav.addObject("user", a);
 		return mav;
 	}
-
-
-
+	
+	
+	
 	@RequestMapping(value = "account/save", method = RequestMethod.POST)
 	public String EditUser(@ModelAttribute("user") UserInfo user,Model model) {
-
+		
 		UserInfo a = userRepository.findByEmail(user.getEmail());
 		a.setAddress(user.getAddress());
 		a.setPhone(user.getPhone());
@@ -73,14 +78,14 @@ public class AppController {
 		userRepository.save(a);
 		return "redirect:/account?success";
 	}
-
+	
 	@RequestMapping(value = "account/changePass", method = RequestMethod.POST)
 	public String ChangePass(@ModelAttribute("user") UserInfo user,String oldpass,String pass, String passConfirm,Model model) {
 		UserInfo a = userRepository.findByEmail(user.getEmail());
-
+		
 		if(!passwordEncoder.matches(oldpass, a.getPassword())) {
 			return "redirect:/account?OldPassNotCorrect";
-
+			
 		}else {
 			if(!pass.equals(passConfirm)) {
 				return "redirect:/account?ConfirmNotCorrect";
@@ -96,9 +101,9 @@ public class AppController {
 				}
 			}
 		}
-
+		
 	}
-
+	
 	@RequestMapping("/register")
     public String showRegistrationForm(Model model){
         // create model object to store form data
