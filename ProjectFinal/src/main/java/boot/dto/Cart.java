@@ -1,10 +1,10 @@
 package boot.dto;
 
-import boot.entity.Product;
+import boot.entity.Products;
 import lombok.Data;
 
 @Data
 public class Cart {
-    private Product product;
+    private Products product;
     private int quantity;
 }

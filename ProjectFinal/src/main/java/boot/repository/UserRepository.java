@@ -8,4 +8,5 @@ import boot.entity.UserInfo;
 @Repository
 public interface UserRepository extends JpaRepository<UserInfo, Long> {
 	UserInfo findByEmail(String email);
+	UserInfo findByResetPasswordToken(String token);
 }

@@ -25,10 +25,15 @@ public class AppController {
 	
 	private UserService userService;
 	
-	
-	public AppController(UserService userService) {
+	@Autowired
+	private UserRepository userRepository;
+
+	private PasswordEncoder passwordEncoder;
+
+	public AppController(UserService userService,PasswordEncoder passwordEncoder) {
 		super();
 		this.userService = userService;
+		this.passwordEncoder = passwordEncoder;
 	}
 	
 	@RequestMapping("/login")
@@ -40,11 +45,60 @@ public class AppController {
 	public String viewHomePage(@AuthenticationPrincipal CustomUserDetails user ,Model model) {
 		String pageTitle = "Cửa hàng mỹ phẩm";
 		model.addAttribute("pageTitle",pageTitle);
+		model.addAttribute("user", user);
 		if(user == null) {
-			return "redirect:/index?notlogin";
+
+			return "redirect:/index";
 		}
 		return "redirect:/index?login";
 	}
+
+	@RequestMapping("/account")
+	public ModelAndView viewAccount(@AuthenticationPrincipal CustomUserDetails user,Model model) {
+		ModelAndView mav = new ModelAndView("User_Setting");
+		UserInfo a = userService.findUserByEmail(user.getUsername());
+		mav.addObject("user", a);
+		return mav;
+	}
+
+
+
+	@RequestMapping(value = "account/save", method = RequestMethod.POST)
+	public String EditUser(@ModelAttribute("user") UserInfo user,Model model) {
+
+		UserInfo a = userRepository.findByEmail(user.getEmail());
+		a.setAddress(user.getAddress());
+		a.setPhone(user.getPhone());
+		a.setFullName(user.getFullName());
+		userRepository.save(a);
+		return "redirect:/account?success";
+	}
+
+	@RequestMapping(value = "account/changePass", method = RequestMethod.POST)
+	public String ChangePass(@ModelAttribute("user") UserInfo user,String oldpass,String pass, String passConfirm,Model model) {
+		UserInfo a = userRepository.findByEmail(user.getEmail());
+
+		if(!passwordEncoder.matches(oldpass, a.getPassword())) {
+			return "redirect:/account?OldPassNotCorrect";
+
+		}else {
+			if(!pass.equals(passConfirm)) {
+				return "redirect:/account?ConfirmNotCorrect";
+			}
+			else {
+				if(oldpass.equals(pass)) {
+					return "redirect:/account?SameOldPass";
+				}
+				else {
+					a.setPassword(passwordEncoder.encode(pass));
+					userRepository.save(a);
+					return "redirect:/account?changesuccessfull";
+				}
+			}
+		}
+
+	}
+
 	@RequestMapping("/register")
     public String showRegistrationForm(Model model){
         // create model object to store form data

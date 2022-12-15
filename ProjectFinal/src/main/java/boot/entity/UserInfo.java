@@ -44,6 +44,9 @@ public class UserInfo {
 	@Column(name = "point")
 	private int point;
 	
+	@Column(name = "reset_password_token")
+	private String resetPasswordToken;
+	
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
         name = "users",
