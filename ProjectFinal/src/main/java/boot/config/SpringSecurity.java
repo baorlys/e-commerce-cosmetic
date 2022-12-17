@@ -45,7 +45,7 @@ public class SpringSecurity {
                 .authorizeRequests()
                 .antMatchers("/registration/**","/js/**","/css/**","/images/**")
                 .permitAll()
-                .antMatchers("/index","/").permitAll()
+                .antMatchers("/index","/","/store/**","/test/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .rememberMe()

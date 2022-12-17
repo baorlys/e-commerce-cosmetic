@@ -27,11 +27,11 @@
 
 <!-- header start  -->
 <header class="header">
-  <a href="" class="logo"><img src="/images/logo.png" alt=""></a>
+  <a href="" class="logo"><img src="./images/logo.png" alt=""></a>
 
   <nav class="navbar-1">
-    <a href=""  th:href="@{index}">Trang Chủ</a>
-    <a href="" th:href="@{store}">Cửa Hàng</a>
+    <a href=""  th:href="@{/index}">Trang Chủ</a>
+    <a href="" th:href="@{/store}">Cửa Hàng</a>
     <a href="#team">Phản hồi</a>
     <a href="#arrivals">Sản phẩm mới</a>
     <a href="#footer">Liên Lạc</a>
@@ -39,114 +39,16 @@
 
   <div class="icons">
     <div id="menu-btn" class="fas fa-bars"></div>
-    <div id="cart-btn" href="#" class="fas fa-shopping-cart"></div>
+    <a href="#" class="fas fa-shopping-cart"></a>
     <div class="fas fa-user" id="login-btn"></div>
     <div id="search-btn" class="fas fa-search"></div>
   </div>
 
-  <form action="" class="search-form">
-    <input type="search" name="" placeholder="search here ..." id="search-box">
-    <label for="search-box" class="fas fa-search"></label>
-  </form>
-
-  <div class="shopping-cart">
-    <div class="box">
-      <i class="fas fa-trash"></i>
-      <img src="/images/product-1.jpg" alt="">
-      <div class="content">
-        <h3>Xịt Tẩy Tế Bào Chết</h3>
-        <span class="price">$4.99/-</span>
-        <span class="quantity">qty : 1</span>
-      </div>
-    </div>
-
-    <div class="box">
-      <i class="fas fa-trash"></i>
-      <img src="/images/product-2.jpg" alt="">
-      <div class="content">
-        <h3>Son SOC</h3>
-        <span class="price">$4.99/-</span>
-        <span class="quantity">qty : 1</span>
-      </div>
-    </div>
-
-    <div class="box">
-      <i class="fas fa-trash"></i>
-      <img src="/images/product-3.jpg" alt="">
-      <div class="content">
-        <h3>Mặt nạ bột</h3>
-        <span class="price">$4.99/-</span>
-        <span class="quantity">qty : 1</span>
-      </div>
-    </div>
-
-    <a href="#" class="btn">Xem giỏ hàng</a>
-  </div>
-
-
-  <form action="" class="login-form" sec:authorize="isAnonymous()">
-    <h3>login form</h3>
-    <p>Bấm vào đây để <a href="login">Đăng Nhập</a> </p>
-    <p>Nếu bạn chưa có tài khoản bấm<a href="register"> Đăng Ký</a> </p>
-  </form>
-  <form action="" class="login-form" sec:authorize="isAuthenticated()">
-    <h3>Xin chào</h3>
-    <a th:href="@{/logout}">Đăng xuất</a>
-    <br>
-    <a th:href="@{/account}">Chỉnh sửa tài khoản</a>
-  </form>
+  <!-- <form action="" class="search-form">
+      <input type="search" name="" placeholder="search here ..." id="search-box">
+      <label for="search-box" class="fas fa-search"></label>
+  </form> -->
 </header>
-<div class="home" id="home">
-
-  <div class="slide active">
-    <div class="content">
-      <img src="/images/content-img-1.png" alt="">
-      <span>new arrivals 2022</span>
-      <h3>cosmetics</h3>
-      <a href="#" class="btn">read more</a>
-      <div class="controls">
-        <div class="fas fa-angle-left" onclick="prev()"></div>
-        <div class="fas fa-angle-right" onclick="next()"></div>
-      </div>
-    </div>
-
-    <div class="image">
-      <img src="/images/home-img-1.png" alt="">
-    </div>
-  </div>
-
-  <div class="slide">
-    <div class="content">
-      <img src="/images/content-img-2.png" alt="">
-      <span>new arrivals 2022</span>
-      <h3>accessories</h3>
-      <a href="#" class="btn">read more</a>
-      <div class="controls">
-        <div class="fas fa-angle-left" onclick="prev()"></div>
-        <div class="fas fa-angle-right" onclick="next()"></div>
-      </div>
-    </div>
-    <div class="image">
-      <img src="/images/home-img-2.png" alt="">
-    </div>
-  </div>
-
-  <div class="slide">
-    <div class="content">
-      <img src="/images/content-img-3.png" alt="">
-      <span>new collections</span>
-      <h3>skin care</h3>
-      <a href="#" class="btn">read more</a>
-      <div class="controls">
-        <div class="fas fa-angle-left" onclick="prev()"></div>
-        <div class="fas fa-angle-right" onclick="next()"></div>
-      </div>
-    </div>
-    <div class="image">
-      <img src="/images/home-img-3.png" alt="">
-    </div>
-  </div>
-</div>
 <!-- header end -->
 <div class="container">
   <div class="row">
@@ -155,7 +57,7 @@
 
 
         <div class="img">
-          <img src="images/product-1.jpg" alt="">
+          <img alt="">
         </div>
 
         <div class="share">
@@ -182,20 +84,18 @@
         <div class="setorder">
           <h4>Set Order</h4>
           <div class="select">
-            <img src="images/product-1.jpg" alt="">
-            <p>Select quantity</p>
+            <img src="" th:src="${product.getPic()}" alt="">
+            <p>Số lượng</p>
           </div>
           <div class="stock">
             <div class="quantity">
-              <input type="button" value="-" class="minus" onclick="minus()">
-              <input type="text  " name="" id="number" min="1" value="1">
-              <input type="button" value="+" class="add" onclick="add()">
+              <input type="text" name="" id="number" min="1" value="1">
             </div>
-            <p>Stock: <span class="conf">100</span></p>
+            <p>Tồn kho: <span class="conf" th:text="${product.getAmount()}">100</span></p>
           </div>
           <div class="total">
             <p>Total price: </p>
-            <p>$<span class="hmuch">45.00</span></p>
+            <p><span class="hmuch" th:text="${product.getPrice()}">45.00</span></p>
           </div>
           <div class="total">
             <p>Shipping: </p>
@@ -210,7 +110,7 @@
 
       <div class="description">
         <div class="name">
-          <h3>Sản phẩm kem bôi thần thánh trẻ ra 50 tuổi cho người dưới 20 tuổi</h3>
+          <h3 th:text="${product.getName()}">Sản phẩm kem bôi thần thánh trẻ ra 50 tuổi cho người dưới 20 tuổi</h3>
         </div>
         <div class="tabs">
           <input type="radio" id="tab1" name="tab-control" checked>
@@ -231,21 +131,21 @@
           </div> -->
           <div class="content">
             <section>
-              <h2>Infomation</h2>
+              <h2>Thông tin</h2>
               <div class="infomation">
                 <!-- ID -->
-                <p><span class="type">ID: </span> P1HK908</p>
+                <p th:text="${product.getProductId()}"><span class="type" >ID: </span> P1HK908</p>
                 <!-- Description -->
-                <p><span class="type">Descriptions: </span>
+                <p th:text="${product.getDesc()}"><span class="type">Mô tả: </span>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dicta vero rerum?
                   Eaque
                   repudiandae architecto libero reprehenderit aliquam magnam ratione quidem? Nobis
                   doloribus molestiae enim deserunt necessitatibus eaque quidem incidunt
                 </p>
                 <!-- Branch -->
-                <p><span class="type">Branch: </span> Horient</p>
+                <p th:text="${product.getBrand()}"><span class="type">Nhãn hiệu: </span> Horient</p>
                 <!-- Supplier -->
-                <p><span class="type">Sipplier: </span> P1HK908</p>
+                <p th:text="${product.getSupplier()}"><span class="type">Nhà cung cấp: </span> P1HK908</p>
                 <!-- Report -->
                 <p>Any problem with this product? <span class="rp"> <i
                         class="fas fa-solid fa-flag"></i> Report </span> </p>

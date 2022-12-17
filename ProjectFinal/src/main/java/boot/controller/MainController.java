@@ -1,21 +1,19 @@
 package boot.controller;
 
-import java.util.List;
+import java.util.*;
 
 
 import boot.entity.Product;
+import boot.entity.Role;
 import boot.entity.User;
 import boot.service.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import boot.repository.UserRepository;
 import boot.service.UserService;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -50,33 +48,42 @@ public class MainController {
 	@RequestMapping("/index")
 	public String homepage(Model model) {
 		List<Product> productList = productService.getAll();
+		Collections.sort(productList, new Comparator<Product>() {
+			@Override
+			public int compare(Product o1, Product o2) {
+				return o2.getProductId().compareTo(o1.getProductId());
+			}
+		});
 		model.addAttribute("productList", productList);
 		return "index";
 	}
 
-	@RequestMapping("/store")
-	public String store(Model model) {
-		List<Product> productList = productService.getAll();
-		model.addAttribute("productList", productList);
-		return "customer/store";
-	}
 
-	@RequestMapping("/store/product/{id}")
-	public String productInfo(@PathVariable("id") long id, Model model) {
-		Product product = productService.findById(id);
-		model.addAttribute("product",product);
-		return "product";
-	}
 
 
 
 
 	@RequestMapping("/account")
 	public ModelAndView viewAccount(@AuthenticationPrincipal UserDetails user, Model model) {
-		ModelAndView mav = new ModelAndView("customer/user_setting");
 		User userLogin = userService.findUserByEmail(user.getUsername());
+		ModelAndView mav;
+		Collection<Role> roles = userLogin.getRoles();
+		long roleId = roles.iterator().next().getRoleId();
+		if (roleId == 1) {
+			mav = new ModelAndView("admin/index_admin");
+		}
+		else {
+			mav = new ModelAndView("customer/user_setting");
+		}
 		mav.addObject("user", userLogin);
 		return mav;
+	}
+
+	@RequestMapping("/account/admin_product")
+	public String getProductList(Model model) {
+		List<Product> productList = productService.getAll();
+		model.addAttribute("productList", productList);
+		return "admin/product_admin";
 	}
 //
 //
@@ -124,9 +131,8 @@ public class MainController {
 	//Test
 	@RequestMapping("/test")
 	public String test(Model model) {
-		List<Product> productList = productService.getAll();
-		int a = productList.size();
-		model.addAttribute("productsList", productList);
-		return "product";
+		Optional<Product> product = productService.findById(1);
+		model.addAttribute("product",product.get());
+		return "test";
 	}
 }

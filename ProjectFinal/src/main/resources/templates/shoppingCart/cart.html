@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/cart.css">
+    <script src="https://kit.fontawesome.com/a3fe8c29cc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.2.js"
+        integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<!-- header start  -->
+<header class="header">
+    <a href="" class="logo"><img src="//images/logo.png" alt=""></a>
+
+    <nav class="navbar-1">
+        <a href="" th:href="@{/index}">Trang Chủ</a>
+        <a href="" th:href="@{/store}">Cửa Hàng</a>
+        <a href="#team">Phản hồi</a>
+        <a href="#arrivals">Sản phẩm mới</a>
+        <a href="#footer">Liên Lạc</a>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="cart-btn" href="#" class="fas fa-shopping-cart"></div>
+        <div class="fas fa-user" id="login-btn"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input type="search" name="" placeholder="search here ..." id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <div class="shopping-cart">
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="//images/product-1.jpg" alt="">
+            <div class="content">
+                <h3>Xịt Tẩy Tế Bào Chết</h3>
+                <span class="price">$4.99/-</span>
+                <span class="quantity">qty : 1</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="//images/product-2.jpg" alt="">
+            <div class="content">
+                <h3>Son SOC</h3>
+                <span class="price">$4.99/-</span>
+                <span class="quantity">qty : 1</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-trash"></i>
+            <img src="//images/product-3.jpg" alt="">
+            <div class="content">
+                <h3>Mặt nạ bột</h3>
+                <span class="price">$4.99/-</span>
+                <span class="quantity">qty : 1</span>
+            </div>
+        </div>
+
+        <a href="#" class="btn">Xem giỏ hàng</a>
+    </div>
+
+
+    <form action="" class="login-form" sec:authorize="isAnonymous()">
+        <h3>login form</h3>
+        <p>Bấm vào đây để <a href="login">Đăng Nhập</a> </p>
+        <p>Nếu bạn chưa có tài khoản bấm<a href="register"> Đăng Ký</a> </p>
+    </form>
+    <form action="" class="login-form" sec:authorize="isAuthenticated()">
+        <h3>Xin chào</h3>
+        <a th:href="@{/logout}">Đăng xuất</a>
+        <br>
+        <a th:href="@{/account}">Chỉnh sửa tài khoản</a>
+    </form>
+</header>
+
+<!-- header end -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="list">
+                    <h3>Giỏ hàng</h3>
+                    <div class="products" th:each="item : ${cartItems}">
+                        <img th:src="${item.getProduct().getPic()}" alt="products">
+                        <div class="description">
+                            <p class="name">Tên SP:<strong th:text="${item.getProduct().getName()}"></strong></p>
+                            <p class="cost" th:text="'Giá: ' + ${item.getProduct().getPrice()}">$9.99</p>
+                            <div class="quantity">
+                                <p>Số lượng:</p>
+                                <input type="number" id="quantity" name="quantity" min="1" th:max="${item.getProduct().getAmount()}" th:value="${item.getQuantity()}">
+                            </div>
+                        </div>
+                        <div class="sum">
+                            <p class="summoney" th:text="'Thành tiền: ' + ${item.getPrice()}">$9.99</p>
+                            <a th:href="@{'/shoppingCart/remove/' + ${item.getProduct().getProductId()}}">xoá</a>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cartbar">
+                    <div class="detail">
+                        <!-- child 1 -->
+                        <div>
+                            <p>Subtotal ($) </p>
+                            <p><span class="subtotal" th:text="${totalPrice}">9.99</span></p>
+                        </div>
+                        <div>
+                            <p>Deliverry ($)</p>
+                            <p><span class="deliver">30000</span></p>
+                        </div>
+                    </div>
+
+                    <div class="total">
+                        <p>Total</p>
+                        <p><span class="total_m" th:text="${totalPrice}+30000"></span></p>
+                    </div>
+
+                    <a href="#" th:href="@{/shoppingCart/payment}" class="primary_button">Thanh toán</a><br>
+                    <a href="#" th:href="@{/store}" class="secondary_button">Tiếp tục mua hàng</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/cartlog.js"></script>
+</body>
+
+</html>

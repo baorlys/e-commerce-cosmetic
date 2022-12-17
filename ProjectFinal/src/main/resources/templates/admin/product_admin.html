@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <title>Modern Admin Dashboard</title>
-    <link rel="stylesheet" href="css/style_admin.css">
+    <link rel="stylesheet" href="/css/style_admin.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 <body>
@@ -212,19 +212,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>#SP1</td>
+                                <tr th:each="product : ${productList}">
+                                    <td th:text="${product.getProductId()}"></td>
                                     <td>
                                         <div class="image">
-                                            <img src="./img/product-4.jpg" alt="">
-                                            <p>Sửa rửa mặt làm trắng da</p>
+                                            <img src="" th:src="${product.getPic()}" alt="">
+                                            <p th:text="${product.getName()}">Sửa rửa mặt làm trắng da</p>
                                         </div>
                                     </td>
                                     <td>
                                         <p>Còn hàng</p>
                                     <td>
                                         <div class="price1">
-                                            <p>130.000VNĐ</p>
+                                            <p th:text="${product.getPrice()}">130.000VNĐ</p>
                                         </div>
                                     </td>
                                     
@@ -242,65 +242,7 @@
                                     
                                 </tr>
 
-                                <tr>
-                                    <td>#SP2</td>
-                                    <td>
-                                        <div class="image">
-                                            <img src="./img/product-5.jpg" alt="">
-                                            <p>Phấn nâu đậm</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p >Còn hàng</p>
-                                    <td>
-                                        <div class="price1">
-                                            <p>180.000VNĐ</p>
-                                        </div>
-                                    </td>
-                                    
-                                    <td>
-                                        <div class="actions1">
-                                            <input type="checkbox" id="CheckBox" name="CheckBox">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="actions1">
-                                            <span class="las la-edit"></span>
-                                            <span class="las la-trash"></span>
-                                        </div>
-                                    </td>
-                                    
-                                </tr>
 
-                                <tr>
-                                    <td>#SP3</td>
-                                    <td>
-                                        <div class="image">
-                                            <img src="./img/product-6.jpg" alt="">
-                                            <p>Xà bông tắm tẩy mụn</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p>Còn hàng</p>
-                                    <td>
-                                        <div class="price1">
-                                            <p>150.000VNĐ</p>
-                                        </div>
-                                    </td>
-                                    
-                                    <td>
-                                        <div class="actions1">
-                                            <input type="checkbox" id="CheckBox" name="CheckBox">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="actions1">
-                                            <span class="las la-edit"></span>
-                                            <span class="las la-trash"></span>
-                                        </div>
-                                    </td>
-                                    
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -313,7 +255,7 @@
         
     </div>
 
-    <script src="js/JS_Admin.js"></script>
+    <script src="/js/JS_Admin.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

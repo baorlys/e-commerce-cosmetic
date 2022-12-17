@@ -3,33 +3,20 @@ package boot.service;
 import boot.entity.Product;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ProductService {
     // create
-    boolean create(Product object);
-
+    boolean create(Product product);
     // update
-    boolean update(Product object);
-
+    boolean update(long productId, Product product);
     // delete
     boolean delete(Product object);
-
     // find by id
-    Product findById(long productId);
+    Optional<Product> findById(long productId);
 
     List<Product> getAll();
-    // load list product by category
-    List<Product> getListByCategory(long categoryId);
 
-    // load list product by category and limit
-    List<Product> getListByCategoryAndLimit(long categoryId, int limit);
+    boolean updateAmount(long productId, int quantity);
 
-    // load list product by featured
-    List<Product> getListFeatured(int limit);
-
-    // load list product by sale
-    List<Product> getListSale(int limit);
-
-    // load list product by nav
-    List<Product> getListNav(int start, int limit);
 }

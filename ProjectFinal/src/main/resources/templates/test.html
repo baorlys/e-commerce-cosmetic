@@ -6,32 +6,6 @@
 </head>
 <body>
 
-  <div class="swiper products-slider">
-      <div class="swiper-wrapper" th:each="product : ${productList}">
-
-          <div class="swiper-slide slide">
-              <div class="image">
-                  <img src="" th:src="${product.pic}" alt="">
-                  <div class="icons">
-                      <a href="#" class="fas fa-shopping-cart"></a>
-                      <a href="#" class="fas fa-heart"></a>
-                      <a href="#" class="fas fa-share"></a>
-
-                  </div>
-              </div>
-              <div class="content">
-                  <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i>
-                  </div>
-                  <a href="" th:text="${product.name}"></a>
-                  <div class="price" th:text="${product.price}"></div>
-              </div>
-          </div>
-      </div>
-  </div>
+<div th:text="${product.getName()}"></div>
 </body>
 </html>

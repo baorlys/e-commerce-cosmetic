@@ -218,9 +218,9 @@
 
             <div class="swiper-slide slide" th:each="product : ${productList}">
                 <div class="image">
-                    <img src="" th:src="${product.pic}" alt="">
+                    <a th:href="@{'/store/product/' + ${product.getProductId()}}"><img src="" th:src="${product.pic}" alt=""></a>
                     <div class="icons">
-                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-shopping-cart" th:href="@{'shoppingCart/add/' + ${product.getProductId()}}"></a>
                         <a href="#" class="fas fa-heart"></a>
                         <a href="#" class="fas fa-share"></a>
 
@@ -234,7 +234,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <a href="" th:text="${product.name}"></a>
+                    <a href="" th:text="${product.name}" th:href="@{'/store/product/' + ${product.getProductId()}}"></a>
                     <div class="price" th:text="${product.price}"></div>
                 </div>
             </div>

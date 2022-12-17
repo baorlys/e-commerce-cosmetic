@@ -6,29 +6,42 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class ProductServiceImpl implements ProductService{
     @Autowired
     private ProductRepository productRepository;
 
+
     @Override
-    public boolean create(Product object) {
+    public boolean create(Product product) {
+        productRepository.save(product);
+        return true;
+    }
+    @Override
+    public boolean delete(Product product) {
+        productRepository.delete(product);
+        return true;
+    }
+
+    @Override
+    public boolean update(long productId, Product productUpdate) {
+        Optional<Product> product = productRepository.findById(productId);
+        if(product.isPresent()) {
+            Product _product = product.get();
+            _product.setAmount(productUpdate.getAmount());
+            _product.setDesc(productUpdate.getDesc());
+            _product.setPrice(productUpdate.getPrice());
+            productRepository.save(_product);
+            return true;
+        }
         return false;
     }
 
     @Override
-    public boolean update(Product object) {
-        return false;
-    }
-
-    @Override
-    public boolean delete(Product object) {
-        return false;
-    }
-
-    @Override
-    public Product findById(long productId) {
-        return null;
+    public Optional<Product> findById(long productId) {
+        return productRepository.findById(productId);
     }
 
     @Override
@@ -37,27 +50,15 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public List<Product> getListByCategory(long categoryId) {
-        return null;
+    public boolean updateAmount(long productId, int quantity) {
+        Optional<Product> product = productRepository.findById(productId);
+        if(product.isPresent()) {
+            Product _product = product.get();
+            _product.setAmount(quantity);
+            productRepository.save(_product);
+            return true;
+        }
+        return false;
     }
 
-    @Override
-    public List<Product> getListByCategoryAndLimit(long categoryId, int limit) {
-        return null;
-    }
-
-    @Override
-    public List<Product> getListFeatured(int limit) {
-        return null;
-    }
-
-    @Override
-    public List<Product> getListSale(int limit) {
-        return null;
-    }
-
-    @Override
-    public List<Product> getListNav(int start, int limit) {
-        return null;
-    }
 }

@@ -27,7 +27,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="product_admin.html" >
+                        <a href="" th:href="@{/account/admin_product}" >
                              <span class="las la-shopping-cart"></span>
                              <small>Sản Phẩm</small>
                          </a>
@@ -101,9 +101,7 @@
                 </div>
             </div>
             <form action="" class="login-form">
-                <h3>login form</h3>
-                <p>Bấm vào đây để <a href="SignIn.html">Đăng Nhập</a> </p>
-                <p>Nếu bạn chưa có tài khoản bấm<a href="SignUp.html"> Đăng Ký</a> </p>
+                <a th:href="@{/logout}">Đăng xuất</a>
             </form>
         </header>
         
