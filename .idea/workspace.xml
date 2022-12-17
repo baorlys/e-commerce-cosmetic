@@ -4,36 +4,180 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d37a132a-42b2-471c-b59a-676f7b022986" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/CartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/dto/Cart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/ProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/JS_IN_UP.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/User_Setting_Style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/802043_man_512x512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/Logo-remake.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/User_Setting.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/User_Setting_Style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/cart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/fragments.html" afterDir="false" />
+    <list default="true" id="d37a132a-42b2-471c-b59a-676f7b022986" name="Changes" comment="50%">
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/UserRegistrationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/css/cart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/css/payment.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/css/product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/css/store.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/css/style_admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/css/style_index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/css/style_user_setting.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/KemDuong_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/KemDuong_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/KemDuong_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/KemDuong_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/Phan_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/Phan_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/Phan_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/Phan_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/Sample_User_Icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/Serum_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/Serum_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/Serum_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/Serum_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/SonMoi_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/SonMoi_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/SonMoi_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/SonMoi_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/SuaRuaMat_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/SuaRuaMat_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/SuaRuaMat_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/SuaRuaMat_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/ThucPhamChucNang_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/ThucPhamChucNang_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/ThucPhamChucNang_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/ThucPhamChucNang_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/admin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/js/JS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/js/JS_Admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/js/JS_IN_UP.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/js/payment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/admin/index_admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/admin/infor_product_user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/admin/product_admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/payment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/store.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/user_setting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/registration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/ProductInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/config/SpringSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/config/SpringSecurity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/AppController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/ForgotPasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/ForgotPasswordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/dto/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/dto/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/dto/UserRegistrationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/dto/UserRegistrationDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/security/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/security/CustomUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/security/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/security/CustomUserDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/security/CustomUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/JS.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/JS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/style1.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/style1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/SignIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/SignIn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/SignUp.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/SignUp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/all.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/all.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/all.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/brands.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/brands.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/brands.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/brands.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/fontawesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/fontawesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/fontawesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/fontawesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/regular.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/regular.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/regular.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/regular.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/solid.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/solid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/solid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/solid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/svg-with-js.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/svg-with-js.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/svg-with-js.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/svg-with-js.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/v4-font-face.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/v4-font-face.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/v4-font-face.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/v4-font-face.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/v4-shims.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/v4-shims.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/v4-shims.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/v4-shims.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/v5-font-face.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/v5-font-face.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/v5-font-face.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/css/v5-font-face.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/all.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/all.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/all.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/brands.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/brands.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/brands.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/brands.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/conflict-detection.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/conflict-detection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/conflict-detection.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/conflict-detection.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/fontawesome.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/fontawesome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/fontawesome.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/fontawesome.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/regular.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/regular.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/regular.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/regular.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/solid.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/solid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/solid.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/solid.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/v4-shims.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/v4-shims.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/v4-shims.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/js/v4-shims.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_animated.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_animated.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_bordered-pulled.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_bordered-pulled.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_core.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_core.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_fixed-width.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_fixed-width.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_icons.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_list.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_list.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_mixins.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_rotated-flipped.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_rotated-flipped.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_screen-reader.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_screen-reader.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_shims.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_shims.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_sizing.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_sizing.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_stacked.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_stacked.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/_variables.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/brands.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/brands.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/fontawesome.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/fontawesome.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/regular.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/regular.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/solid.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/solid.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/v4-shims.less" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/less/v4-shims.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/categories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/categories.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/icon-families.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/icon-families.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/icon-families.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/icon-families.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/icons.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/icons.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/icons.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/icons.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/shims.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/shims.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/shims.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/shims.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/sponsors.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/metadata/sponsors.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_animated.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_animated.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_bordered-pulled.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_bordered-pulled.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_core.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_fixed-width.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_fixed-width.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_functions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_rotated-flipped.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_rotated-flipped.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_screen-reader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_screen-reader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_shims.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_shims.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_sizing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_sizing.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_stacked.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_stacked.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/brands.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/brands.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/fontawesome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/fontawesome.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/regular.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/regular.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/solid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/solid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/v4-shims.scss" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/scss/v4-shims.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/sprites/brands.svg" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/sprites/brands.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/sprites/regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/sprites/regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/sprites/solid.svg" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/sprites/solid.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/svgs/solid/xmarks-lines.svg" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/FontAwesome/fontawesome-free-6.2.0-web/svgs/solid/xmarks-lines.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/JS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/JS_IN_UP.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/User_Setting_Style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/802043_man_512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/images/Logo-remake.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/style1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/SignIn.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/SignUp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/User_Setting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/User_Setting_Style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/cart style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/cartlog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/forgot_password_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/fragments.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/yeah.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/message.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/reset_password_form.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +190,9 @@
         <option value="com.haulmont.jpb.JpaRepository" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -90,33 +236,44 @@
     </option>
   </component>
   <component name="ProjectId" id="2IGNoIRj1WVWmqnSDN5i2y4Hhbn" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Techzones/Documents/Workplace/IT/Java Technology/Final/java-final/ProjectFinal/src/main/resources/static/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "8ada2542922de2e17a7517b2896b126a"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Techzones/Documents/Workplace/IT/Java Technology/Final/java-final/ProjectFinal/src/main/resources/static/images&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;8ada2542922de2e17a7517b2896b126a&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Techzones\Documents\Workplace\IT\Java Technology\Final\java-final\ProjectFinal\src\main\resources\static\images" />
       <recent name="C:\Users\Techzones\Documents\Workplace\IT\Java Technology\Final\java-final\ProjectFinal\src\main\resources\static" />
       <recent name="C:\Users\Techzones\Documents\Workplace\IT\Java Technology\Final\java-final\ProjectFinal\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Techzones\Documents\Workplace\IT\Java Technology\Final\java-final\ProjectFinal\src\main\resources\templates\admin" />
+      <recent name="C:\Users\Techzones\Documents\Workplace\IT\Java Technology\Final\java-final\ProjectFinal\src\main\resources\templates\fragments" />
+      <recent name="C:\Users\Techzones\Documents\Workplace\IT\Java Technology\Final\java-final\ProjectFinal\src\main\resources\templates" />
+      <recent name="C:\Users\Techzones\Documents\Workplace\IT\Java Technology\Final\java-final\ProjectFinal\src\main\resources\templates\customer" />
     </key>
   </component>
   <component name="RunManager">
@@ -137,7 +294,11 @@
       <option name="presentableId" value="Default" />
       <updated>1669804137595</updated>
       <workItem from="1669804139872" duration="1396000" />
-      <workItem from="1669831841957" duration="6213000" />
+      <workItem from="1669831841957" duration="6436000" />
+      <workItem from="1671129853254" duration="1721000" />
+      <workItem from="1671189735826" duration="4849000" />
+      <workItem from="1671194603106" duration="11684000" />
+      <workItem from="1671219074307" duration="15899000" />
     </task>
     <servers />
   </component>
@@ -154,6 +315,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="50%" />
+    <option name="LAST_COMMIT_MESSAGE" value="50%" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,6 +1,6 @@
 package boot.repository;
 
-import boot.entity.Products;
+import boot.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,14 +8,15 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Products, Long> {
+public interface ProductRepository extends JpaRepository<Product, Long> {
     @Override
-    Optional<Products> findById(Long id);
+    Optional<Product> findById(Long id);
 
 
     @Override
-    void delete(Products product);
+    void delete(Product product);
+
 
     @Override
-    List<Products> findAll();
+    List<Product> findAll();
 }

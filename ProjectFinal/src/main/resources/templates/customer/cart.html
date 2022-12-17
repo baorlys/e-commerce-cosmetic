@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="cart style.css">
+  <script src="https://kit.fontawesome.com/a3fe8c29cc.js" crossorigin="anonymous"></script>
+  <script src="/js/cartlog.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.2.js"
+          integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="list">
+        <h3>Cart</h3>
+        <div class="products">
+          <img src="/images/product-1.jpg" alt="products">
+          <div class="description">
+            <p class="name"><strong>Product's name</strong></p>
+            <p class="cost">$9.99 <span> In Stock </span> </p>
+            <div class="quantity">
+              <input type="button" value="-" class="minus" onclick="minus()">
+              <input type="text  " name="" class="number" min="1" value="1">
+              <input type="button" value="+" class="add" onclick="add()">
+            </div>
+          </div>
+          <div class="sum">
+            <p class="summoney">$9.99</p>
+            <button>
+              <span><i class="fas fa-duotone fa-trash"></i></span>
+              Delete
+            </button>
+          </div>
+        </div>
+
+        <div class="products">
+          <img src="/images/product-1.jpg" alt="products">
+          <div class="description">
+            <p class="name"><strong>Product's name</strong></p>
+            <p class="cost">$9.99 <span> In Stock </span> </p>
+            <div class="quantity">
+              <input type="button" value="-" class="minus" onclick="minus()">
+              <input type="text  " name="" class="number" min="1" value="1">
+              <input type="button" value="+" class="add" onclick="add()">
+            </div>
+          </div>
+          <div class="sum">
+            <p class="summoney">$9.99</p>
+            <button>
+              <span><i class="fas fa-duotone fa-trash"></i></span>
+              Delete
+            </button>
+          </div>
+        </div>
+
+        <div class="products">
+          <img src="/images/product-1.jpg" alt="products">
+          <div class="description">
+            <p class="name"><strong>Product's name</strong></p>
+            <p class="cost">$9.99 <span> In Stock </span> </p>
+            <div class="quantity">
+              <input type="button" value="-" class="minus" onclick="minus()">
+              <input type="text  " name="" class="number" min="1" value="1">
+              <input type="button" value="+" class="add" onclick="add()">
+            </div>
+          </div>
+          <div class="sum">
+            <p class="summoney">$9.99</p>
+            <button>
+              <span><i class="fas fa-duotone fa-trash"></i></span>
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="cartbar">
+        <div class="detail">
+          <!-- child 1 -->
+          <div>
+            <p>Subtotal ($) </p>
+            <p><span class="subtotal">9.99</span></p>
+          </div>
+          <!-- child 2 -->
+          <div>
+            <p>Discount ($)</p>
+            <p><span class="percent">20</span>% - <span class="discount">1.99</span></p>
+          </div>
+          <!-- child 3 -->
+          <div>
+            <p>Deliverry ($)</p>
+            <p><span class="deliver">0.99</span></p>
+          </div>
+        </div>
+
+        <div class="total">
+          <p>Total</p>
+          <p><span class="total_m">8.99</span></p>
+        </div>
+
+        <a href="#" class="primary_button">Proceed to checkout</a><br>
+        <a href="#" class="secondary_button">Countinue shopping</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

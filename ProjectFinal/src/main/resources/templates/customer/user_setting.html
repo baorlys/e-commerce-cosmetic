@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Account Settings UI Design</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style_user_setting.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/flatpickr.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.2.3/themes/dark.css">
+  <!-- Font Awesome 5.15.1 CSS
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+<!-- header start  -->
+<header class="header">
+  <a href="" class="logo"><img src="/images/logo.png" alt=""></a>
+
+  <nav class="navbar-1">
+    <a href="" th:href="@{/index}">Trang Chủ</a>
+    <a href="#shop">Cửa Hàng</a>
+    <a href="#team">Phản hồi</a>
+    <a href="#arrivals">Sản phẩm mới</a>
+    <a href="#footer">Liên Lạc</a>
+  </nav>
+
+
+    <a href="#" class="btn">Xem giỏ hàng</a>
+  </div>
+
+
+  <form action="" class="login-form">
+    <a th:href="@{/logout}">Đăng xuất</a>
+  </form>
+</header>
+<!-- header end -->
+
+
+
+<section class="py-5 my-5">
+  <div class="container">
+    <h1>Account Settings</h1>
+    <div class="bg-white shadow rounded-lg d-block d-sm-flex" id="fcn">
+      <div class="ptn profile-tab-nav border-right">
+        <div class="p-4">
+          <div class="img-circle text-center mb-3">
+            <img src="/images/Sample_User_Icon.png" alt="Image" class="shadow">
+          </div>
+          <h4 class="text-center" th:text="${user.getFullName()}"></h4>
+        </div>
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab"
+             aria-controls="account" aria-selected="true">
+            <i class="icons fa fa-home text-center mr-1"></i>
+            <span class="tag">Thông tin</span>
+          </a>
+          <a class="nav-link" id="password-tab" data-toggle="pill" href="#password" role="tab"
+             aria-controls="password" aria-selected="false">
+            <i class=" icons fa fa-key text-center mr-1"></i>
+            <span class="tag">Bảo mật</span>
+          </a>
+          <a class="nav-link" id="security-tab" data-toggle="pill" href="#security" role="tab"
+             aria-controls="security" aria-selected="false">
+            <i class="icons fa fa-user text-center mr-1"></i>
+            <span class="tag">Lịch sử mua hàng</span>
+          </a>
+          <a class="nav-link" id="application-tab" data-toggle="pill" href="#application" role="tab"
+             aria-controls="application" aria-selected="false">
+            <i class="icons fa fa-tv text-center mr-1"></i>
+            <span class="tag">Mạng xã hội</span>
+          </a>
+        </div>
+      </div>
+      <div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="account" role="tabpanel" aria-labelledby="account-tab">
+          <h3 class="mb-4">Thông tin tài khoản</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Họ và tên</label>
+                <input type="text" class="form-control" th:value="${user.getFullName()}">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Địa chỉ</label>
+                <input type="text" class="form-control" th:value="${user.getAddress()}">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" th:value="${user.getEmail()}" >
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Số điện thoại</label>
+                <input type="text" class="form-control" th:value="${user.getPhone()}">
+              </div>
+            </div>
+
+
+          </div>
+          <div>
+            <button class="btn btn-primary">Update</button>
+            <button class="btn btn-light">Cancel</button>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="password" role="tabpanel" aria-labelledby="password-tab">
+          <h3 class="mb-4">Password Settings</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Old password</label>
+                <input type="password" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>New password</label>
+                <input type="password" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Confirm new password</label>
+                <input type="password" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-primary">Update</button>
+            <button class="btn btn-light">Cancel</button>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+          <h3 class="mb-4">History payment</h3>
+          <!--  -->
+          <div class="row">
+            <div class="container-history-payment">
+              <div class="status">
+                <span><i class="fa-solid fa-truck"></i></span>
+                <p style="padding: 8px; margin-bottom: 0;">Giao hang thanh cong</p>
+              </div>
+              <div class="products-payment">
+                <div class="co-ppi">
+                  <img class="products-payment-img" src="/images/product-1.jpg" alt="">
+                </div>
+                <div class="description">
+                  <p>Mellow Milk Mist-Fourth Ray Beauty</p>
+                  <span><b><i>x1</i></b></span>
+                </div>
+                <div class="cost">
+                  <p>9.99$</p>
+                </div>
+              </div>
+              <div class="total">
+                <p>
+                  Total:
+                  <span>
+											9.99$
+										</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="container-history-payment">
+              <div class="status">
+                <span><i class="fa-solid fa-truck"></i></span>
+                <p style="padding: 8px; margin-bottom: 0;">Giao hang thanh cong</p>
+              </div>
+              <div class="products-payment">
+                <div class="co-ppi">
+                  <img class="products-payment-img" src="/images/product-1.jpg" alt="">
+                </div>
+                <div class="description">
+                  <p>Mellow Milk Mist-Fourth Ray Beauty</p>
+                  <span><b><i>x1</i></b></span>
+                </div>
+                <div class="cost">
+                  <p>9.99$</p>
+                </div>
+              </div>
+              <div class="total">
+                <p>
+                  Total:
+                  <span>
+											9.99$
+										</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="container-history-payment">
+              <div class="status">
+                <span><i class="fa-solid fa-truck"></i></span>
+                <p style="padding: 8px; margin-bottom: 0;">Giao hang thanh cong</p>
+              </div>
+              <div class="products-payment">
+                <div class="co-ppi">
+                  <img class="products-payment-img" src="/images/product-1.jpg" alt="">
+                </div>
+                <div class="description">
+                  <p>Mellow Milk Mist-Fourth Ray Beauty</p>
+                  <span><b><i>x1</i></b></span>
+                </div>
+                <div class="cost">
+                  <p>9.99$</p>
+                </div>
+              </div>
+              <div class="total">
+                <p>
+                  Total:
+                  <span>
+											9.99$
+										</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="application" role="tabpanel" aria-labelledby="application-tab">
+          <h3 class="mb-4 col-12">Connect us on social media</h3>
+          <div class="row cn">
+            <div class="">
+
+              <ul class="wrapper">
+                <a href="#" class="icon fb">
+                  <div class="tooltip">Facebook</div>
+                  <span><i class="fab fa-facebook-f"></i></span>
+                </a>
+                <a href="#" class="icon tw">
+                  <div class="tooltip">Twiter</div>
+                  <span><i class="fab fa-twitter"></i></span>
+                </a>
+                <a href="#" class="icon ins">
+                  <div class="tooltip">Instagram</div>
+                  <span><i class="fab fa-instagram"></i></span>
+                </a>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script src="/js/JS_IN_UP.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script>
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementsByClassName("header").style.top = "0";
+    } else {
+      document.getElementsByClassName("header").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+  }
+</script>
+</body>
+
+</html>

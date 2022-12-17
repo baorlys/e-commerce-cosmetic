@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/store.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+  <a href="" class="logo"><img src="/images/logo.png" alt=""></a>
+
+  <nav class="navbar-1">
+    <a href=""  th:href="@{index}">Trang Chủ</a>
+    <a href="#">Cửa Hàng</a>
+    <a href="#team">Phản hồi</a>
+    <a href="#arrivals">Sản phẩm mới</a>
+    <a href="#footer">Liên Lạc</a>
+  </nav>
+
+  <div class="icons">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <div id="cart-btn" href="#" class="fas fa-shopping-cart"></div>
+    <div class="fas fa-user" id="login-btn"></div>
+    <div id="search-btn" class="fas fa-search"></div>
+  </div>
+
+  <form action="" class="search-form">
+    <input type="search" name="" placeholder="search here ..." id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+  </form>
+
+  <div class="shopping-cart">
+    <div class="box">
+      <i class="fas fa-trash"></i>
+      <img src="/images/product-1.jpg" alt="">
+      <div class="content">
+        <h3>Xịt Tẩy Tế Bào Chết</h3>
+        <span class="price">$4.99/-</span>
+        <span class="quantity">qty : 1</span>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-trash"></i>
+      <img src="/images/product-2.jpg" alt="">
+      <div class="content">
+        <h3>Son SOC</h3>
+        <span class="price">$4.99/-</span>
+        <span class="quantity">qty : 1</span>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-trash"></i>
+      <img src="/images/product-3.jpg" alt="">
+      <div class="content">
+        <h3>Mặt nạ bột</h3>
+        <span class="price">$4.99/-</span>
+        <span class="quantity">qty : 1</span>
+      </div>
+    </div>
+
+    <a href="#" class="btn">Xem giỏ hàng</a>
+  </div>
+
+
+  <form action="" class="login-form" sec:authorize="isAnonymous()">
+    <h3>login form</h3>
+    <p>Bấm vào đây để <a href="login">Đăng Nhập</a> </p>
+    <p>Nếu bạn chưa có tài khoản bấm<a href="register"> Đăng Ký</a> </p>
+  </form>
+  <form action="" class="login-form" sec:authorize="isAuthenticated()">
+    <h3>Xin chào</h3>
+    <a th:href="@{/logout}">Đăng xuất</a>
+    <br>
+    <a th:href="@{/account}">Chỉnh sửa tài khoản</a>
+  </form>
+</header>
+<div class="home" id="home">
+
+  <div class="slide active">
+    <div class="content">
+      <img src="/images/content-img-1.png" alt="">
+      <span>new arrivals 2022</span>
+      <h3>cosmetics</h3>
+      <a href="#" class="btn">read more</a>
+      <div class="controls">
+        <div class="fas fa-angle-left" onclick="prev()"></div>
+        <div class="fas fa-angle-right" onclick="next()"></div>
+      </div>
+    </div>
+
+    <div class="image">
+      <img src="/images/home-img-1.png" alt="">
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="content">
+      <img src="/images/content-img-2.png" alt="">
+      <span>new arrivals 2022</span>
+      <h3>accessories</h3>
+      <a href="#" class="btn">read more</a>
+      <div class="controls">
+        <div class="fas fa-angle-left" onclick="prev()"></div>
+        <div class="fas fa-angle-right" onclick="next()"></div>
+      </div>
+    </div>
+    <div class="image">
+      <img src="/images/home-img-2.png" alt="">
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="content">
+      <img src="/images/content-img-3.png" alt="">
+      <span>new collections</span>
+      <h3>skin care</h3>
+      <a href="#" class="btn">read more</a>
+      <div class="controls">
+        <div class="fas fa-angle-left" onclick="prev()"></div>
+        <div class="fas fa-angle-right" onclick="next()"></div>
+      </div>
+    </div>
+    <div class="image">
+      <img src="/images/home-img-3.png" alt="">
+    </div>
+  </div>
+</div>
+
+<section class="search">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="wrap">
+          <h4>CÁC DÒNG SẢN PHẨM</h4>
+          <ul>
+            <li> <a href="">Son</a> </li>
+            <li> <a href="">Kem dưỡng</a> </li>
+            <li> <a href="">Sữa rửa mặt</a> </li>
+            <li> <a href="">Serum </a> </li>
+            <li> <a href="">Thực phẩm chức năng</a> </li>
+          </ul>
+          <h4><small>Khoảng giá</small></h4>
+          <div class="aboutprice">
+            <input type="text" class="price pricestart" placeholder="From">
+            <div class="icon">
+              <p>--</p>
+            </div>
+            <input type="text" class="price priceendt" placeholder="to">
+          </div>
+          <button>Áp dụng</button>
+
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="type">
+          <h4>Son <span>(255 sản phẩm)</span> </h4>
+        </div>
+        <div class="sort">
+          <p>Sắp xếp theo:</p>
+          <button class="sorttype">Mới nhất</button>
+          <button class="sorttype">Bán chạy</button>
+          <button class="sorttype">giá thấp đến cao</button>
+          <button class="sorttype">giá cao đến thấp</button>
+        </div>
+        <div class="productlist">
+          <div class="row" >
+            <div class="col-md-3 col-lg-3" th:each="product : ${productList}">
+              <div class="product">
+                <a th:href="@{'/store/product/' + ${product.getProductId()}}"><img th:src="${product.getPic()}" alt="product" ></a>
+                <p class="cost" th:text="${product.getPrice()}">128000 đ</p>
+                <p class="nsx" th:text="${product.getBrand()}">The Litte</p>
+                <a class="name" th:text="${product.getName()}" th:href="@{'/store/product/' + ${product.getProductId()}}"></a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="/js/JS.js"></script>
+
+<script>
+  lightGallery(document.querySelector('.gallery .lightbox'));
+</script>
+</body>
+
+</html>

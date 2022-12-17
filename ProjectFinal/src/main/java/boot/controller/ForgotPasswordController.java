@@ -2,7 +2,6 @@ package boot.controller;
 
 import java.io.UnsupportedEncodingException;
 
-import javax.mail.MessageRemovedException;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import boot.dto.Utility;
-import boot.entity.UserInfo;
+import boot.entity.User;
 import boot.service.UserService;
 import net.bytebuddy.utility.RandomString;
 
@@ -75,7 +74,7 @@ public class ForgotPasswordController {
 	
 	@GetMapping("/reset_password")
 	public String showResetPasswordForm(@Param(value = "token") String token, Model model) {
-		UserInfo user = userService.getByResetPasswordToken(token);
+		User user = userService.getByResetPasswordToken(token);
 		model.addAttribute("token", token);
 		
 		if(user == null) {
@@ -90,7 +89,7 @@ public class ForgotPasswordController {
 		String token = request.getParameter("token");
 		String password = request.getParameter("password");
 		
-		UserInfo user = userService.getByResetPasswordToken(token);
+		User user = userService.getByResetPasswordToken(token);
 		model.addAttribute("title", "Reset your password");
 		
 		if(user == null) {

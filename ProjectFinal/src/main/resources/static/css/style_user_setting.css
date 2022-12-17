@@ -1,0 +1,427 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+* {
+    font-family: 'Poppins', sans-serif;
+    /* margin: 0;
+    padding: 0; */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* outline: none; */
+    border: none;
+    text-decoration: none;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+body {
+
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(120deg, rgb(41 140 185), rgb(207 79 175));
+}
+
+
+
+:root{
+    --main-color:#e84393;
+    --font_login: #607d8b;
+    --black:#333;
+    --white:#fff;
+    --light-color:#666;
+    --light-bg: #f5f5f5;
+    --border:.2rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    /* scroll-behavior: smooth;
+    scroll-padding-top: 6rem; */
+}
+
+/* section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  padding: 5rem 9%;
+  justify-content: center;
+} */
+
+.shadow {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    height: 90%;
+}
+
+.profile-tab-nav {
+    min-width: 250px;
+}
+
+.profile-tab-nav h4{
+    font-size: 2rem;
+}
+
+.tab-content {
+    flex: 1;
+}
+
+.tab-content h3{
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.nav-pills a.nav-link {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    color: #333;
+}
+.nav-pills a.nav-link i {
+    width: 20px;
+}
+
+.img-circle img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 5px solid #fff;
+}
+
+
+/* For connect social------------------------------------------------------------------------------ */
+.cn{
+
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    text-align: center;
+    margin-top: 42px;
+}
+.wrapper .icon {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    display: inline-block;
+    align-items: center;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: #333;
+    text-decoration: none;
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    line-height: 1.5;
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.wrapper .fb:hover,
+.wrapper .fb:hover .tooltip,
+.wrapper .fb:hover .tooltip::before {
+    background-color: #3b5999;
+    color: #ffffff;
+}
+.wrapper .tw:hover,
+.wrapper .tw:hover .tooltip,
+.wrapper .tw:hover .tooltip::before {
+    background-color: #46c1f6;
+    color: #ffffff;
+}
+.wrapper .ins:hover,
+.wrapper .ins:hover .tooltip,
+.wrapper .ins:hover .tooltip::before {
+    background-color: #e1306c;
+    color: #ffffff;
+}
+
+/* For history Payment--------------------------------------------------------------------------- */
+.container-history-payment{
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid lightslategray;
+    border-radius: 20px;
+}
+
+.co-ppi{
+    border: 5px solid #e1e8ec;
+    max-width: max-content;
+    box-shadow: inset;
+    margin-left: 30px;
+}
+.products-payment-img{
+    width: 50px;
+    height: 50px;
+
+}
+.status{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: small;
+}
+.status:nth-child(2){
+    padding: 0px;
+    font-size: small;
+}
+
+.products-payment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    font-size: small;
+    border-bottom: 1px solid #333 ;
+    border-top:  1px solid #333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.description{
+    margin:0 20px;
+
+}
+
+.total{
+    display: flex;
+    justify-content: end;
+    font-size: small;
+}
+
+
+/* Header and navigation bar------------------------------------------------------------------------------------------------- */
+.header{
+    padding: .5rem 9%;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0; left: 0; right: 0;
+    position: fixed;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.header .logo img{
+    height: 8rem;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 110%; right: -110%;
+    height: 5rem;
+    width: 50rem;
+    border-radius: .5rem;
+    background: var(--light-bg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+}
+
+.header .search-form.active{
+    right: 2rem;
+    transition: .5s linear;
+}
+
+.header .search-form input{
+    width: 100%;
+    background: none;
+    font-size: 1.6rem;
+    color: var(--light-color);
+    text-transform: none;
+}
+
+.header .search-form label{
+    font-size: 2rem;
+    margin-left: .7rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover{
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.header .navbar-1 a{
+    font-size: 2rem;
+    color: var(--black);
+    margin-left: 2rem;
+    font-weight: 450;
+}
+
+.header .navbar-1 a:hover{
+    color: var(--main-color);
+    letter-spacing: 0.1rem;
+}
+
+.header .icons a,
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    background: var(--light-bg);
+    color: var(--black);
+    cursor: pointer;
+    font-size: 1.8rem;
+    margin-left: .3rem;
+    border-radius: .5rem;
+}
+
+.header .icons a:hover,
+.header .icons div:hover{
+    background: var(--main-color);
+    color: white;
+}
+
+/* .header .icons #search-btn{
+  display: none;
+} */
+
+/* navbar */
+.navbar{
+    position: fixed;
+    top: 0; left: -110%;
+    z-index: 1010;
+    height: 100%;
+    width: 100%;
+    background: url(/images/navbar-bg.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-flow: column;
+    align-items: flex-end;
+    padding-right: 15%;
+}
+
+.navbar.active{
+    left: 0;
+}
+
+.navbar #close-navbar{
+    position: absolute;
+    top: 3rem; right: 2rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    background: var(--white);
+    color: var(--black);
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.navbar #close-navbar:hover{
+    color: var(--white);
+    background: var(--main-color);
+}
+
+.navbar a{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: lighter;
+    display: none;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+    letter-spacing: .2rem;
+}
+
+a:hover{
+    background-color: #46c1f6;
+}
+
+#menu-btn{
+    display: none;
+}
+
+@media (max-width: 786px)
+{
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+
+    .header .navbar-1{
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        background-color: var(--white);
+        border-top: var(--border);
+        border-bottom: var(--border);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+    }
+
+    .header .navbar-1.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .navbar-1 a{
+        display: block;
+        margin: 2rem;
+    }
+}
+label{
+    font-size: 1.4em;
+}
+input{
+    font-size: 1.4em;
+}
+.tag{
+    font-size: 1.4em;
+}

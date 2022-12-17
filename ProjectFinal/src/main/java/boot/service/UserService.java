@@ -1,17 +1,14 @@
 package boot.service;
 
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.stereotype.Repository;
-
 import boot.dto.UserRegistrationDto;
-import boot.entity.UserInfo;
+import boot.entity.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 
-public interface UserService {
-	UserInfo save(UserRegistrationDto registrationDto);
-	UserInfo admin();
-	UserInfo findUserByEmail(String email);
+public interface UserService extends UserDetailsService {
+	User save(UserRegistrationDto registrationDto);
+	User findUserByEmail(String email);
 	void updateResetPasswordToken(String token, String email) throws Exception;
-	UserInfo getByResetPasswordToken(String token);
-	void updatePassword(UserInfo customer, String newPassword);
+	User getByResetPasswordToken(String token);
+	void updatePassword(User customer, String newPassword);
 }
