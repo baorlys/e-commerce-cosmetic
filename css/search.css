@@ -1,0 +1,365 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:300,400";
+/* colors */
+/* tab setting */
+/* breakpoints */
+/* selectors relative to radio inputs */
+
+
+* {
+  font-family: 'Questrial', sans-serif;
+}
+
+:root{
+  --main-color:#e84393;
+  --font_login: #607d8b;
+  --black:#333;
+  --white:#fff;
+  --light-color:#666;
+  --light-bg: #f5f5f5;
+  --border:.2rem solid var(--black);
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+
+html{
+
+    font-size: 62.5%;
+}
+
+.search{
+    padding-top: 4em;
+    font-size: large;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: flex-start;
+    border: 0.6px solid rgb(183, 183, 183);
+    padding: 1em 1em 0.5em 1em;
+    box-sizing: border-box;
+
+}
+ul{
+    padding: 0;
+}
+
+ul li{
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #666;
+    font-size: small;
+
+}
+
+ul li a:hover{
+    color: #e84393;
+    font-size:  1.1em;
+}
+
+h4 small{
+    font-size: 0.8em;
+    font-weight: 550;
+    text-transform: uppercase;
+    color: #607d8b;
+}
+
+
+.aboutprice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+.price{
+    width: 45%;
+
+}
+.icon{
+    font-size: 0.7em;
+    color: #666;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.wrap button{
+    border: 1px solid #666;
+    margin-top: 1em;
+    background-color: darkorange;
+    color: #f5f5f5;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.wrap button:hover{
+    background-color: #e84393;}
+
+
+.type{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.sort{
+    background-color: rgb(235, 235, 232);
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-start;
+}
+.sort p{
+    padding: 0;
+}
+
+.sorttype{
+    border: 0px solid #666;
+    font-size: 0.7em;
+    padding: 3px;
+    margin: 0 10px;
+}
+
+.sorttype:hover{
+    background-color: #80e4df;
+    color: #f5f5f5;
+}
+
+.sorttype:active, .sorttype:focus, .sorttype:target{
+    background-color: #5e7f7e;
+}
+
+.row{
+    height: auto;
+}
+.product{
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid cadetblue; */
+    overflow: hidden;
+    min-height: 100px;
+    /* max-height: 280px; */
+    padding: 0;
+    margin-top: 0.5em;
+   
+}
+.product img{
+    height: 100%;
+max-width: 100%;
+display: block;
+margin: auto;
+}
+
+.product .cost{
+    color: #ec894c;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 90%;
+    padding-top: 0.2em;
+}
+.product .nsx{
+    color: #3b7550;
+    font-weight: bolder;
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+}
+
+.product .name{
+    color: #666;
+    font-size: 0.9em;
+}
+
+
+/* Head--------------------------------------- */
+/* Header and navigation bar------------------------------------------------------------------------------------------------- */
+.header{
+    padding: .5rem 9%;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0; left: 0; right: 0;
+    position: relative;
+    z-index: 1000;
+    transition: top 0.3s;
+    font-size: 62.5%;
+  }
+  
+  .header .logo img{
+    height: 8rem;
+  }
+  
+  .header .search-form{
+    position: absolute;
+    top: 110%; right: -110%;
+    height: 5rem;
+    width: 50rem;
+    border-radius: .5rem;
+    background: var(--light-bg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+  }
+  
+  .header .search-form.active{
+    right: 2rem;
+    transition: .5s linear;
+  }
+  
+  .header .search-form input{
+    width: 100%;
+    background: none;
+    font-size: 1.6rem;
+    color: var(--light-color);
+    text-transform: none;
+  }
+  
+  .header .search-form label{
+    font-size: 2rem;
+    margin-left: .7rem;
+    color: var(--black);
+  }
+  
+  .header .search-form label:hover{
+    color: var(--main-color);
+    cursor: pointer;
+  }
+  
+  .header .navbar-1 a{
+    font-size: 2rem;
+    color: var(--black);
+    margin-left: 2rem;
+    font-weight: 450;
+    
+  }
+  
+  .header .navbar-1 a:hover{
+    color: var(--main-color);
+    letter-spacing: 0.1rem;
+  }
+  
+  .header .icons a, 
+  .header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    background: var(--light-bg);
+    color: var(--black);
+    cursor: pointer;
+    font-size: 1.8rem;
+    margin-left: .3rem;
+    border-radius: .5rem;
+  }
+  
+  .header .icons a:hover, 
+  .header .icons div:hover{
+    background: var(--main-color);
+    color: white;
+  }
+  
+  /* .header .icons #search-btn{
+    display: none;
+  } */
+  
+  /* navbar */
+  .navbar{
+    position: fixed;
+    top: 0; left: -110%;
+    z-index: 1010;
+    height: 100%;
+    width: 100%;
+    background: url(./images/navbar-bg.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-flow: column;
+    align-items: flex-end;
+    padding-right: 15%;
+  }
+  
+  .navbar.active{
+    left: 0;
+  }
+  
+  .navbar #close-navbar{
+    position: absolute;
+    top: 3rem; right: 2rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    background: var(--white);
+    color: var(--black);
+    cursor: pointer;
+    font-size: 3rem;
+  }
+  
+  .navbar #close-navbar:hover{
+    color: var(--white);
+    background: var(--main-color);
+  }
+  
+  .navbar a{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: lighter;
+    display: none;
+  }
+  
+  .navbar a:hover{
+    color: var(--main-color);
+    letter-spacing: .2rem;
+  }
+  
+  a:hover{
+    background-color: #46c1f6;
+  }
+  
+  #menu-btn{
+    display: none;
+  }
+  
+  @media (max-width: 786px)
+  {   
+      #menu-btn{
+          display: inline-block;
+          transition: .2s linear;
+      }
+  
+      #menu-btn.fa-times{
+          transform: rotate(180deg);
+      }
+  
+      .header .navbar-1{
+          position: absolute;
+          top: 99%; left: 0; right: 0;
+          background-color: var(--white);
+          border-top: var(--border);
+          border-bottom: var(--border);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          transition: .2s linear;
+      }
+  
+      .header .navbar-1.active{
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+  
+      .header .navbar-1 a{
+          display: block;
+          margin: 2rem;
+      }
+  }
