@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cửa hàng mỹ phẩm</title>
+</head>
+<body>
+<div>
+    <a href="" th:href="@{/account/admin_product}">Trở lại</a>
+</div>
+<form th:action="@{/admin/addProduct}" th:object="${product}" method="post">
+    <label for="name">Tên</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Tên">
+    <br>
+    <label for="amount">Số lượng</label>
+    <input type="text" th:field="*{amount}" id="amount" placeholder="Số lượng">
+    <br>
+    <label for="price">Giá</label>
+    <input type="text" th:field="*{price}" id="price" placeholder="Giá">
+    <br>
+    <label for="brand">Brand</label>
+    <input type="text" th:field="*{brand}" id="brand" placeholder="Brand">
+    <br>
+    <label for="supplier">Nhà cung cấp</label>
+    <input type="text" th:field="*{supplier}" id="supplier" placeholder="Nhà cung cấp">
+    <br>
+    <label for="desc">Thông tin</label>
+    <input type="text" th:field="*{desc}" id="desc" placeholder="Thông tin">
+    <br>
+    <input type="submit" value="thêm">
+</form>
+</body>
+</html>

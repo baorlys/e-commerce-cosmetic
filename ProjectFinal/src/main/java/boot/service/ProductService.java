@@ -12,11 +12,13 @@ public interface ProductService {
     boolean update(long productId, Product product);
     // delete
     boolean delete(Product object);
+    boolean deleteById(long productId);
     // find by id
     Optional<Product> findById(long productId);
 
     List<Product> getAll();
 
     boolean updateAmount(long productId, int quantity);
+
 
 }

@@ -4,7 +4,9 @@ import boot.dto.CartItem;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -16,13 +18,18 @@ public class Transaction {
     @Column(name = "trans_id", nullable = false)
     private long transId;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="user_id")
+    private User user;
+
     @Column(name = "trans_address", nullable = false)
     private String transAddress;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name="trans_item_id")
-    private List<TransItem> cartItems;
+    @Column(name = "trans_date")
+    private Date transDate;
+
 
     @Column(name ="trans_status")
     private int status;
+
 }

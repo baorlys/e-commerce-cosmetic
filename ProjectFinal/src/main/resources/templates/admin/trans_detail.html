@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <title>Modern Admin Dashboard</title>
+    <title>Cửa hàng mỹ phẩm</title>
     <link rel="stylesheet" href="/css/style_admin.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
@@ -20,13 +20,13 @@
             <div class="side-menu">
                 <ul>
                     <li>
-                       <a href="index_admin.html" class="active">
+                       <a th:href="@{/account}" class="active">
                             <span class="las la-home"></span>
                             <small>Trang Chủ</small>
                         </a>
                     </li>
                     <li>
-                        <a href="product_admin.html" >
+                        <a th:href="@{/account/admin_product}">
                              <span class="las la-shopping-cart"></span>
                              <small>Sản Phẩm</small>
                          </a>
@@ -204,74 +204,58 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th><span ></span> USERS</th>
-                                    <th><span ></span> PRODUCTS PURCHASED</th>
-                                    <th><span ></span> PRICE</th>
-                                    <th><span ></span> CONFIRM</th>
-                                    <th><span ></span> FEATURE</th>
+                                    <th><span ></span> Khách hàng</th>
+                                    <th><span ></span> Sản phẩm</th>
+                                    <th><span ></span> Số lượng</th>
+                                    <th><span ></span> Giá</th>
+                                    <th><span ></span> Tổng tiền</th>
+                                    <th><span ></span> Hành động</th>
+                                    <th><span ></span> </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>#1001</td>
+                                    <td th:text="${trans.getTransId()}">#1001</td>
                                     <td>
                                         <div class="client">
                                            <div class="client-img bg-img" style="background-image: url(img/pic-4.png)"></div>
                                             <div class="client-info">
-                                                <h4>Andrew Bruno</h4>
-                                                <small>bruno@crossover.org</small>
+                                                <h4 th:text="${trans.getUser().getFullName()}">Andrew Bruno</h4>
+                                                <small th:text="${trans.getUser().getEmail()}">bruno@crossover.org</small>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
-                                        <div class="image">
-                                            <img src="./img/product-4.jpg" alt="">
-                                            <p>Sửa rửa mặt làm trắng da</p>
+                                        <div class="image"  th:each="item : ${transItemList}">
+                                            <img th:src="${item.getProduct().getPic()}" alt="">
+                                            <p th:text="${item.getProduct().getName()}"></p>
                                         </div>
-                                        <div class="image">
-                                            <img src="./img/product-5.jpg" alt="">
-                                            <p>Phấn nâu đậm</p>
+
+                                    </td>
+                                    <td>
+                                        <div class="price" th:each="item : ${transItemList}">
+                                            <p th:text="${item.getProduct().getPrice()}">130.000VNĐ</p>
                                         </div>
-                                        <div class="image">
-                                            <img src="./img/product-6.jpg" alt="">
-                                            <p>Xà bông tắm tẩy mụn</p>
+                                    </td>
+                                    <td>
+                                        <div class="price" th:each="item : ${transItemList}">
+                                            <p th:text="${item.getQuantity()}">130.000VNĐ</p>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="price">
-                                            <p>130.000VNĐ</p>
-                                        </div>
-                                        <div class="price">
-                                            <p>180.000VNĐ</p>
-                                        </div>
-                                        <div class="price">
-                                            <p>150.000VNĐ</p>
+                                            <p th:text="${totalPrice}">130.000VNĐ</p>
                                         </div>
                                     </td>
                                     
                                     <td>
                                         <div class="actions">
-                                            <input type="checkbox" id="CheckBox" name="CheckBox">
-                                        </div>
-                                        <div class="actions">
-                                            <input type="checkbox" id="CheckBox" name="CheckBox">
-                                        </div>
-                                        <div class="actions">
-                                            <input type="checkbox" id="CheckBox" name="CheckBox">
+                                            <a th:href="@{'/admin/confirmTrans/' + ${trans.getTransId()}}">Xác nhận</a>
                                         </div>
                                     </td>
                                     <td>
                                         <div class="actions">
-                                            <span class="las la-edit"></span>
-                                            <span class="las la-trash"></span>
-                                        </div>
-                                        <div class="actions">
-                                            <span class="las la-edit"></span>
-                                            <span class="las la-trash"></span>
-                                        </div>
-                                        <div class="actions">
-                                            <span class="las la-edit"></span>
-                                            <span class="las la-trash"></span>
+                                            <a th:href="@{'/admin/cancelTrans/' + ${trans.getTransId()}}"><span class="las la-trash"></span></a>
                                         </div>
                                     </td>
                                     

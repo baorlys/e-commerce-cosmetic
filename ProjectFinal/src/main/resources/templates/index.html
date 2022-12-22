@@ -45,53 +45,36 @@
     </form>
 
     <div class="shopping-cart">
-        <div class="box">
+        <div class="box" th:each="item : ${cartItems}">
             <i class="fas fa-trash"></i>
-            <img src="/images/product-1.jpg" alt="">
+            <img th:src="${item.getProduct().getPic()}" alt="">
             <div class="content">
-                <h3>Xịt Tẩy Tế Bào Chết</h3>
-                <span class="price">$4.99/-</span>
-                <span class="quantity">qty : 1</span>
+                <h3 th:text="${item.getProduct().getName()}">Xịt Tẩy Tế Bào Chết</h3>
+                <span th:text="${item.getProduct().getPrice()}" class="price">$4.99/-</span>
+                <span th:text="'SL:' + ${item.getQuantity()}" class="quantity"></span>
             </div>
         </div>
 
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img src="/images/product-2.jpg" alt="">
-            <div class="content">
-                <h3>Son SOC</h3>
-                <span class="price">$4.99/-</span>
-                <span class="quantity">qty : 1</span>
-            </div>
-        </div>
 
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img src="/images/product-3.jpg" alt="">
-            <div class="content">
-                <h3>Mặt nạ bột</h3>
-                <span class="price">$4.99/-</span>
-                <span class="quantity">qty : 1</span>
-            </div>
-        </div>
-
-        <a href="#" class="btn">Xem giỏ hàng</a>
+        <a th:href="@{/shoppingCart/cart}" class="btn">Xem giỏ hàng</a>
     </div>
 
 
     <form action="" class="login-form" sec:authorize="isAnonymous()">
         <h3>login form</h3>
-        <p>Bấm vào đây để <a href="login">Đăng Nhập</a> </p>
-        <p>Nếu bạn chưa có tài khoản bấm<a href="register"> Đăng Ký</a> </p>
+        <p>Bấm vào đây để <a th:href="@{/login}">Đăng Nhập</a> </p>
+        <p>Nếu bạn chưa có tài khoản bấm<a th:href="@{/registration}"> Đăng Ký</a> </p>
     </form>
     <form action="" class="login-form" sec:authorize="isAuthenticated()">
         <h3>Xin chào</h3>
         <a th:href="@{/logout}">Đăng xuất</a>
         <br>
-        <a th:href="@{/account}">Chỉnh sửa tài khoản</a>
+        <a th:if="${roleId == 1}" th:href="@{/account}">Quản lí</a>
+        <a th:if="${roleId == 2}" th:href="@{/account}">Chỉnh sửa tài khoản</a>
     </form>
 </header>
 <!-- header end -->
+<div class="" th:text="${message}" th:if="${message}"></div>
 <!-- navbar section  -->
 <nav class="navbar">
     <div id="close-navbar" class="fas fa-times"></div>

@@ -22,5 +22,6 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     @Override
     void delete(Product product);
 
-
+    @Override
+    void deleteById(Long aLong);
 }

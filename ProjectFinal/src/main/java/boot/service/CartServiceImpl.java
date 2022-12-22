@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class CartServiceImpl implements CartService{
+public class CartServiceImpl implements CartService {
 
-    private Map<Long, CartItem> map = new HashMap<Long,CartItem>();
+    private Map<Long, CartItem> map = new HashMap<Long, CartItem>();
 
     @Override
     public void add(CartItem item) {
@@ -23,7 +23,7 @@ public class CartServiceImpl implements CartService{
     }
 
     @Override
-    public void remove(int productId) {
+    public void remove(long productId) {
         map.remove(productId);
     }
 
@@ -38,9 +38,9 @@ public class CartServiceImpl implements CartService{
     }
 
     @Override
-    public void update(int productId, int quantity) {
+    public void update(long productId, int quantity) {
         CartItem item = map.get(productId);
-        item.setQuantity(item.getQuantity() + quantity);
+        item.setQuantity(quantity);
         if (item.getQuantity() <= 0) {
             map.remove(productId);
         }

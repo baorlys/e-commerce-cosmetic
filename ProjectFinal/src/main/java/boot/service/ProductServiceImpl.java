@@ -26,6 +26,12 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    public boolean deleteById(long productId) {
+        productRepository.deleteById(productId);
+        return true;
+    }
+
+    @Override
     public boolean update(long productId, Product productUpdate) {
         Optional<Product> product = productRepository.findById(productId);
         if(product.isPresent()) {

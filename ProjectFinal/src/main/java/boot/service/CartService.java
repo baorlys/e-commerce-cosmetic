@@ -6,11 +6,11 @@ import java.util.Collection;
 
 public interface CartService {
     void add(CartItem item);
-    void remove(int productId);
+    void remove(long productId);
     void clear();
     Collection<CartItem> getCartItems();
 
-    void update(int productId, int quantity);
+    void update(long productId, int quantity);
 
     public int getTotalPrice();
 

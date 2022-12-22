@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <title>Modern Admin Dashboard</title>
+    <title>Cửa hàng mỹ phẩm</title>
     <link rel="stylesheet" href="/css/style_admin.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
@@ -13,24 +13,24 @@
         
         <div class="side-content">
             <div class="profile">
-                <div class="profile-img bg-img" style="background-image: url(./img/logo.png)"></div>
+                <div class="profile-img bg-img" style="background-image: url(/images/logo.png)"></div>
                 <h4>22 COSMETIC</h4>
             </div>
 
             <div class="side-menu">
                 <ul>
                     <li>
-                       <a href="index_admin.html" class="active">
+                        <a th:href="@{/account}" class="active">
                             <span class="las la-home"></span>
                             <small>Trang Chủ</small>
                         </a>
                     </li>
                     <li>
-                        <a href="product_admin.html" >
-                             <span class="las la-shopping-cart"></span>
-                             <small>Sản Phẩm</small>
-                         </a>
-                     </li>
+                        <a th:href="@{/account/admin_product}">
+                            <span class="las la-shopping-cart"></span>
+                            <small>Sản Phẩm</small>
+                        </a>
+                    </li>
                     <li>
                        <a href="" >
                             <span class="las la-user-alt"></span>
@@ -78,7 +78,7 @@
 
                 <div class="search">
                     <input type="text" name="search" placeholder="search here">
-                    <label for="search"><i class="las la-search"></i></label>
+                    <label ><i class="las la-search"></i></label>
                 </div>
                 
                 <div class="header-menu">
@@ -185,7 +185,7 @@
 
                     <div class="record-header">
                         <div class="add">
-                            <select name="" id="">
+                            <select>
                                 <option value="">ID</option>
                             </select>
                             <button>Add record</button>
@@ -198,17 +198,16 @@
                             </select>
                         </div>
                     </div>
-
+                    <div><a th:href="@{/admin/addProductForm}">Thêm sản phẩm</a></div>
                     <div class="row">
                         <table width="100%">
                             <thead>
                                 <tr>
-                                    <th> PRODUCT CODE</th>
-                                    <th><span ></span> NAME PRODUCTS</th>
-                                    <th><span ></span> STATUS</th>
-                                    <th><span ></span> PRICE</th>
-                                    <th><span ></span> CONFIRM</th>
-                                    <th><span ></span> FEATURE</th>
+                                    <th> Mã</th>
+                                    <th><span ></span> Tên</th>
+                                    <th><span ></span> Trạng thái</th>
+                                    <th><span ></span> Giá</th>
+                                    <th><span ></span> Hành động</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -221,22 +220,18 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <p>Còn hàng</p>
+                                        <p th:if="${product.getAmount == 0}" style="color:red">Hết hàng</p>
+                                        <p th:if="${product.getAmount > 0}">Còn hàng</p>
                                     <td>
                                         <div class="price1">
                                             <p th:text="${product.getPrice()}">130.000VNĐ</p>
                                         </div>
                                     </td>
-                                    
+
                                     <td>
                                         <div class="actions1">
-                                            <input type="checkbox" id="CheckBox" name="CheckBox">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="actions1">
-                                            <span class="las la-edit"></span>
-                                            <span class="las la-trash"></span>
+                                            <a href="" th:href="@{'/admin/updateProductForm/' + ${product.getProductId()}}"> <span class="las la-edit"></span></a>
+                                            <a href="" th:href="@{'/admin/removeProduct/' + ${product.getProductId()}}"><span class="las la-trash"></span></a>
                                         </div>
                                     </td>
                                     

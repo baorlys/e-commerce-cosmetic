@@ -2,6 +2,7 @@ package boot.service;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
 
@@ -88,6 +89,11 @@ public class UserServiceImpl implements UserService {
 		
 		user.setResetPasswordToken(null);
 		userRepository.save(user);
+	}
+
+	@Override
+	public List<User> findAll() {
+		return userRepository.findAll();
 	}
 
 

@@ -14,8 +14,9 @@ public class TransItem {
     private long transItemId;
 
     @ManyToOne
-    @JoinColumn(name ="trans_id")
+    @JoinColumn(name="trans_id")
     private Transaction transaction;
+
 
     @OneToOne
     @JoinColumn(name = "product_id")
@@ -23,5 +24,6 @@ public class TransItem {
 
     @Column(name = "quantity")
     private int quantity;
+
 
 }

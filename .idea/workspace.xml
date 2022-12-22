@@ -4,35 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d37a132a-42b2-471c-b59a-676f7b022986" name="Changes" comment="50%">
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/TransItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/CartService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/CartServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/js/cartlog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/shoppingCart/cart.html" afterDir="false" />
+    <list default="true" id="d37a132a-42b2-471c-b59a-676f7b022986" name="Changes" comment="75%">
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/dto/TransDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/TransItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/TransactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/TransItemService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/TransItemServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/TransactionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/admin/add_product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/admin/update_product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/shoppingCart/checkout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/config/SpringSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/config/SpringSecurity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/CartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/dto/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/dto/CartItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/UserRegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/controller/UserRegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/TransItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/TransItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/CartServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/css/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/css/cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/css/store.css" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/static/css/store.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/java/boot/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/admin/index_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/admin/index_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/admin/infor_product_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/admin/trans_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/admin/product_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/admin/product_admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/cart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/store.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/store.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/user_setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/user_setting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/customer/product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/shoppingCart/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/shoppingCart/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectFinal/src/main/resources/templates/test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,10 +57,10 @@
       <list>
         <option value="com.haulmont.jpb.JpaRepository" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -63,6 +75,13 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -155,7 +174,10 @@
       <workItem from="1671129853254" duration="1721000" />
       <workItem from="1671189735826" duration="4849000" />
       <workItem from="1671194603106" duration="11684000" />
-      <workItem from="1671219074307" duration="36053000" />
+      <workItem from="1671219074307" duration="36940000" />
+      <workItem from="1671561839043" duration="18592000" />
+      <workItem from="1671652593437" duration="298000" />
+      <workItem from="1671653023430" duration="19186000" />
     </task>
     <task id="LOCAL-00001" summary="50%">
       <created>1671266807580</created>
@@ -164,7 +186,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671266807580</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="75%">
+      <created>1671290759566</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671290759566</updated>
+    </task>
+    <task id="LOCAL-00003" summary="75%">
+      <created>1671290793219</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671290793220</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +220,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="50%" />
-    <option name="LAST_COMMIT_MESSAGE" value="50%" />
+    <MESSAGE value="75%" />
+    <option name="LAST_COMMIT_MESSAGE" value="75%" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
